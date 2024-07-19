@@ -24,7 +24,7 @@ enum class InquiryStatus {
 /// CLASS METHODS ///
 /////////////////////
 // Gets a string status of the InquiryStatus
-std::string toString(InquiryStatus status) {
+inline std::string toString(InquiryStatus status) {
     switch (status) {
         case InquiryStatus::Pending:
             return "Pending";

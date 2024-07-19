@@ -25,7 +25,7 @@ enum class UrgencyLevel {
 /// CLASS METHODS ///
 /////////////////////
 // Gets a string status of the UrgencyLevel
-std::string toString(UrgencyLevel level) {
+inline std::string toString(UrgencyLevel level) {
     switch (level) {
         case UrgencyLevel::Low:
             return "Low";

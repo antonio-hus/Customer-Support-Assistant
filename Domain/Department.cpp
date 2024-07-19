@@ -20,7 +20,7 @@ std::string Department::getName() const {
 }
 
 // Object Operator Overload
-Department &Department::operator=(const Department &other) { this->departmentName = other.getName(); }
+Department &Department::operator=(const Department &other) { this->departmentName = other.getName(); return *this; }
 bool Department::operator<(const Department &other) const { return this->departmentName < other.getName(); }
 bool Department::operator==(const Department &other) const { return this->departmentName == other.departmentName; }
 

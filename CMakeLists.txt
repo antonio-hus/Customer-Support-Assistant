@@ -31,6 +31,9 @@ add_executable(
         Repository/BankRepository.cpp
         Controller/BankController.h
         Controller/BankController.cpp
+        Gui/ControllerView.h
+        Gui/ControllerView.cpp
+        Gui/ControllerView.ui
         Gui/ClientView.h
         Gui/ClientView.cpp
         Gui/ClientView.ui
@@ -40,6 +43,9 @@ add_executable(
         Gui/InquiriesView.h
         Gui/InquiriesView.cpp
         Gui/InquiriesView.ui
+        Gui/StatisticsView.h
+        Gui/StatisticsView.cpp
+        Gui/StatisticsView.ui
         Utils/ObserverPattern.h
 )
 target_link_libraries(Customer_Support_Assistant

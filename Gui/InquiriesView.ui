@@ -1,22 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-    <author/>
-    <comment/>
-    <exportmacro/>
-    <class>InquiriesView</class>
-    <widget class="QWidget" name="InquiriesView">
-        <property name="geometry">
-            <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>400</width>
-                <height>300</height>
-            </rect>
-        </property>
-        <property name="windowTitle">
-            <string>InquiriesView</string>
-        </property>
+ <class>InquiriesView</class>
+ <widget class="QWidget" name="InquiriesView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>643</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>InquiriesView</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Pending:</string>
+     </property>
     </widget>
-    <pixmapfunction/>
-    <connections/>
+   </item>
+   <item>
+    <widget class="QTableView" name="pendingView"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Processing:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableView" name="processingView"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Completed:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableView" name="completedView"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
 </ui>

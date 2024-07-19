@@ -210,7 +210,7 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 45,
+				"line" : 51,
 				"parent" : 0
 			}
 		]
@@ -322,7 +322,9 @@
 				15,
 				17,
 				20,
-				23
+				23,
+				26,
+				29
 			]
 		}
 	],
@@ -429,7 +431,9 @@
 				15,
 				17,
 				20,
-				23
+				23,
+				26,
+				29
 			]
 		},
 		{
@@ -448,9 +452,13 @@
 				19,
 				22,
 				25,
-				26,
-				27,
-				28
+				28,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36
 			]
 		},
 		{
@@ -460,14 +468,16 @@
 				18,
 				21,
 				24,
-				29
+				27,
+				30,
+				37
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				30
+				38
 			]
 		}
 	],
@@ -564,6 +574,22 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "Gui/ControllerView.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Gui/ControllerView.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Gui/ControllerView.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
 			"path" : "Gui/ClientView.h",
 			"sourceGroupIndex" : 1
 		},
@@ -612,7 +638,29 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "Gui/StatisticsView.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Gui/StatisticsView.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Gui/StatisticsView.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
 			"path" : "Utils/ObserverPattern.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/Customer_Support_Assistant_autogen/include/Gui/ui_ControllerView.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -631,6 +679,12 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "cmake-build-debug/Customer_Support_Assistant_autogen/include/Gui/ui_InquiriesView.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/Customer_Support_Assistant_autogen/include/Gui/ui_StatisticsView.h",
 			"sourceGroupIndex" : 1
 		},
 		{

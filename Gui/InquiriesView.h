@@ -1,28 +1,39 @@
-//
-// Created by anton on 19/07/2024.
-//
-
 #ifndef CUSTOMER_SUPPORT_ASSISTANT_INQUIRIESVIEW_H
 #define CUSTOMER_SUPPORT_ASSISTANT_INQUIRIESVIEW_H
 
+///////////////////////
+/// IMPORTS SECTION ///
+//////////////////////
+// C++ Libraries
+// Qt Libraries
 #include <QWidget>
+// Project Libraries
+#include "../Controller/BankController.h"
 #include "../Utils/ObserverPattern.h"
 
+
+////////////////////////////
+/// NAMESPACE DEFINITION ///
+////////////////////////////
 QT_BEGIN_NAMESPACE
 namespace Ui { class InquiriesView; }
 QT_END_NAMESPACE
 
+
+////////////////////////
+/// CLASS DEFINITION ///
+////////////////////////
 class InquiriesView : public QWidget, public Observer {
 Q_OBJECT
+private:
+    BankController* controller;
+    Ui::InquiriesView *ui;
 
 public:
-    explicit InquiriesView(QWidget *parent = nullptr);
-
+    explicit InquiriesView(BankController* controller, QWidget *parent = nullptr);
+    void notify() override {};
     ~InquiriesView() override;
-
-private:
-    Ui::InquiriesView *ui;
 };
 
 
-#endif //CUSTOMER_SUPPORT_ASSISTANT_INQUIRIESVIEW_H
+#endif
