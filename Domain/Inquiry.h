@@ -1,0 +1,9 @@
+#ifndef CUSTOMER_SUPPORT_ASSISTANT_INQUIRY_H
+#define CUSTOMER_SUPPORT_ASSISTANT_INQUIRY_H
+
+class Inquiry {
+
+};
+
+
+#endif

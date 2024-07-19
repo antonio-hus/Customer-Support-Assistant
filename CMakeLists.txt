@@ -14,7 +14,14 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(Customer_Support_Assistant main.cpp)
+add_executable(
+        Customer_Support_Assistant
+        main.cpp
+        Domain/User.h
+        Domain/User.cpp
+        Domain/Inquiry.h
+        Domain/Inquiry.cpp
+)
 target_link_libraries(Customer_Support_Assistant
         Qt::Core
         Qt::Gui
