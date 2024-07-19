@@ -14,7 +14,7 @@
 // Object Constructor
 User::User(std::string  username): username{std::move( username )} { UserValidator::checkUser(*this); }
 
-// Object Property Getters
+// Object Attribute Getters
 std::string User::getUsername() const {
     return this->username;
 }
@@ -36,6 +36,6 @@ void UserValidator::validateUsername(const std::string& username) {
 }
 
 // Object Methods Public
-void UserValidator::checkUser(const User &user) {
+void UserValidator::checkUser(User &user) {
     validateUsername(user.getUsername());
 }

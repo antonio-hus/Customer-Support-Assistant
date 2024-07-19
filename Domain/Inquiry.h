@@ -7,6 +7,11 @@
 // C++ Libraries
 #include <string>
 #include <exception>
+// Project Libraries
+#include "Department.h"
+#include "User.h"
+#include "InquiryStatus.h"
+#include "UrgencyLevel.h"
 
 
 ////////////////////////
@@ -14,6 +19,59 @@
 ///////////////////////
 // Inquiry Class
 class Inquiry {
+private:
+
+    // Provided Inquiry Information
+    User user;
+    std::string message;
+
+    // Determined Inquiry Information
+    std::string inquiryID;
+    Department department;
+    UrgencyLevel urgencyLevel;
+    InquiryStatus inquiryStatus;
+
+public:
+
+    // Inquiry Constructor
+    Inquiry(const User& user, const std::string& message, const std::string& inquiryID="-1",
+            const Department& departament=Department(), UrgencyLevel urgencyLevel=UrgencyLevel::Low,
+            InquiryStatus inquiryStatus=InquiryStatus::Pending);
+
+    // Inquiry Attribute Getters
+    User getUser();
+    std::string getMessage();
+    std::string getID();
+    Department getDepartament();
+    UrgencyLevel getUrgencyLevel();
+    InquiryStatus getInquiryStatus();
+
+    // Inquiry Attribute Setters
+    void setID(const std::string& inquiryID);
+    void setDepartment(const Department& department);
+    void setUrgencyLevel(UrgencyLevel urgencyLevel);
+    void setStatus(InquiryStatus status);
+
+};
+
+// Inquiry Class Exception
+class InquiryException: public std::exception{
+private:
+    std::string exceptionMessage;
+
+public:
+    explicit InquiryException(std::string message);
+    [[nodiscard]] const char* what() const noexcept override;
+
+};
+
+// Inquiry Class Validator
+class InquiryValidator {
+private:
+    static void validateMessage(const std::string& message);
+
+public:
+    static void checkInquiry(Inquiry& inquiry);
 
 };
 

@@ -42,7 +42,7 @@ private:
     static void validateUsername(const std::string& username);
 
 public:
-    static void checkUser(const User& user);
+    static void checkUser(User& user);
 
 };
 

@@ -18,8 +18,9 @@ private:
     std::string departmentName;
 
 public:
-    explicit Department(std::string  name);
+    explicit Department(std::string name="None");
     [[nodiscard]] std::string getName() const;
+    Department& operator=(const Department& other);
 
 };
 
@@ -40,7 +41,7 @@ private:
     static void validateName(const std::string& departmentName);
 
 public:
-    static void checkDepartment(const Department& department);
+    static void checkDepartment(Department& department);
 
 };
 

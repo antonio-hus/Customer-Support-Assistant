@@ -14,10 +14,13 @@
 // Object Constructor
 Department::Department(std::string name): departmentName{std::move(name)} {}
 
-// Object Property Getters
+// Object Attribute Getters
 std::string Department::getName() const {
     return this->departmentName;
 }
+
+// Object Operator Overload
+Department &Department::operator=(const Department &other) { this->departmentName = other.getName(); }
 
 /// User Class Exception
 // Object Constructor
@@ -36,6 +39,6 @@ void DepartmentValidator::validateName(const std::string& departmentName) {
 }
 
 // Object Methods Public
-void DepartmentValidator::checkDepartment(const Department &department) {
+void DepartmentValidator::checkDepartment(Department &department) {
     validateName(department.getName());
 }
