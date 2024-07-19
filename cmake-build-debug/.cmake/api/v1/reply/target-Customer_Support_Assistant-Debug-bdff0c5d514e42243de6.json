@@ -210,7 +210,7 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 29,
+				"line" : 31,
 				"parent" : 0
 			}
 		]
@@ -317,18 +317,18 @@
 				3,
 				5,
 				7,
-				9
+				11
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "Customer_Support_Assistant_autogen::@6890427a1f51a3e7e1df"
+			"id" : "Customer_Support_Assistant_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "Customer_Support_Assistant_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "Customer_Support_Assistant_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "Customer_Support_Assistant::@6890427a1f51a3e7e1df",
@@ -419,7 +419,7 @@
 				3,
 				5,
 				7,
-				9
+				11
 			]
 		},
 		{
@@ -429,21 +429,23 @@
 				2,
 				4,
 				6,
-				8
+				8,
+				9,
+				10
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				10
+				12
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				11
+				13
 			]
 		}
 	],
@@ -475,24 +477,13 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Domain/Departament.h",
+			"path" : "Domain/Department.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Domain/Departament.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "Domain/Bank.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Domain/Bank.cpp",
+			"path" : "Domain/Department.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -504,6 +495,27 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Domain/Inquiry.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Domain/InquiryStatus.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Domain/UrgencyLevel.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Repository/BankRepository.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Repository/BankRepository.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

@@ -21,10 +21,12 @@ add_executable(
         Domain/User.cpp
         Domain/Department.h
         Domain/Department.cpp
-        Domain/Bank.h
-        Domain/Bank.cpp
         Domain/Inquiry.h
         Domain/Inquiry.cpp
+        Domain/InquiryStatus.h
+        Domain/UrgencyLevel.h
+        Repository/BankRepository.h
+        Repository/BankRepository.cpp
 )
 target_link_libraries(Customer_Support_Assistant
         Qt::Core

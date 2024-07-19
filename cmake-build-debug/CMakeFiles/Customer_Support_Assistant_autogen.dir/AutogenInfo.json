@@ -222,15 +222,9 @@
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Bank.h",
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Department.h",
 			"MU",
-			"JE6WBJKE3F/moc_Bank.cpp",
-			null
-		],
-		[
-			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Departament.h",
-			"MU",
-			"JE6WBJKE3F/moc_Departament.cpp",
+			"JE6WBJKE3F/moc_Department.cpp",
 			null
 		],
 		[
@@ -240,9 +234,27 @@
 			null
 		],
 		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/InquiryStatus.h",
+			"MU",
+			"JE6WBJKE3F/moc_InquiryStatus.cpp",
+			null
+		],
+		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/UrgencyLevel.h",
+			"MU",
+			"JE6WBJKE3F/moc_UrgencyLevel.cpp",
+			null
+		],
+		[
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/User.h",
 			"MU",
 			"JE6WBJKE3F/moc_User.cpp",
+			null
+		],
+		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Repository/BankRepository.h",
+			"MU",
+			"RSXGBB323P/moc_BankRepository.cpp",
 			null
 		]
 	],
@@ -318,12 +330,7 @@
 	"SOURCES" : 
 	[
 		[
-			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Bank.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Departament.cpp",
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Department.cpp",
 			"MU",
 			null
 		],
@@ -334,6 +341,11 @@
 		],
 		[
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/User.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Repository/BankRepository.cpp",
 			"MU",
 			null
 		],
