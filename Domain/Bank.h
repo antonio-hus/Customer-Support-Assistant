@@ -1,19 +1,21 @@
-#ifndef CUSTOMER_SUPPORT_ASSISTANT_INQUIRY_H
-#define CUSTOMER_SUPPORT_ASSISTANT_INQUIRY_H
+#ifndef CUSTOMER_SUPPORT_ASSISTANT_BANK_H
+#define CUSTOMER_SUPPORT_ASSISTANT_BANK_H
 
 ///////////////////////
 /// IMPORTS SECTION ///
 //////////////////////
 // C++ Libraries
 #include <string>
+#include <vector>
 #include <exception>
 
 ////////////////////////
 /// CLASS DEFINITION ///
 ///////////////////////
-// Inquiry Class
-class Inquiry {
+// Bank Class
+class Bank {
 
 };
 
-#endif
+
+#endif //CUSTOMER_SUPPORT_ASSISTANT_BANK_H

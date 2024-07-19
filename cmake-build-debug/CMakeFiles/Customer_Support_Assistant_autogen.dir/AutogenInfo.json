@@ -222,6 +222,18 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Bank.h",
+			"MU",
+			"JE6WBJKE3F/moc_Bank.cpp",
+			null
+		],
+		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Departament.h",
+			"MU",
+			"JE6WBJKE3F/moc_Departament.cpp",
+			null
+		],
+		[
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Inquiry.h",
 			"MU",
 			"JE6WBJKE3F/moc_Inquiry.cpp",
@@ -305,6 +317,16 @@
 	"SETTINGS_FILE" : "C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/CMakeFiles/Customer_Support_Assistant_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Bank.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Departament.cpp",
+			"MU",
+			null
+		],
 		[
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Inquiry.cpp",
 			"MU",

@@ -210,7 +210,7 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 25,
+				"line" : 29,
 				"parent" : 0
 			}
 		]
@@ -315,7 +315,9 @@
 				0,
 				1,
 				3,
-				5
+				5,
+				7,
+				9
 			]
 		}
 	],
@@ -415,7 +417,9 @@
 				0,
 				1,
 				3,
-				5
+				5,
+				7,
+				9
 			]
 		},
 		{
@@ -423,21 +427,23 @@
 			"sourceIndexes" : 
 			[
 				2,
-				4
+				4,
+				6,
+				8
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				6
+				10
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				7
+				11
 			]
 		}
 	],
@@ -465,6 +471,28 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Domain/User.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Domain/Departament.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Domain/Departament.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Domain/Bank.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Domain/Bank.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
