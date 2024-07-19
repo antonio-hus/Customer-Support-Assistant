@@ -1,0 +1,8 @@
+# ninja log v5
+2	178	7430871029868420	Customer_Support_Assistant_autogen/timestamp	df317960c2feab3e
+2	178	7430871029868420	Customer_Support_Assistant_autogen/mocs_compilation.cpp	df317960c2feab3e
+2	178	7430871029868420	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/Customer_Support_Assistant_autogen/timestamp	df317960c2feab3e
+2	178	7430871029868420	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/Customer_Support_Assistant_autogen/mocs_compilation.cpp	df317960c2feab3e
+179	269	7430871031155653	CMakeFiles/Customer_Support_Assistant.dir/Customer_Support_Assistant_autogen/mocs_compilation.cpp.obj	afc879bc34ae962e
+183	3037	7430871058804736	CMakeFiles/Customer_Support_Assistant.dir/main.cpp.obj	571fd15b4e44063e
+3040	3435	7430871060956545	Customer_Support_Assistant.exe	b913e8df63cac896

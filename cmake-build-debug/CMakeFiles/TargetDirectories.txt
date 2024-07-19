@@ -1,0 +1,5 @@
+C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/CMakeFiles/Customer_Support_Assistant.dir
+C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/CMakeFiles/Customer_Support_Assistant_autogen_timestamp_deps.dir
+C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/CMakeFiles/Customer_Support_Assistant_autogen.dir
