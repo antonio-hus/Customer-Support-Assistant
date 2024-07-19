@@ -21,6 +21,8 @@ public:
     explicit Department(std::string name="None");
     [[nodiscard]] std::string getName() const;
     Department& operator=(const Department& other);
+    bool operator<(const Department& other) const;
+    bool operator==(const Department& other) const;
 
 };
 

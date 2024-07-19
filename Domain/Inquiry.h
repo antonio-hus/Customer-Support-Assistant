@@ -38,13 +38,16 @@ public:
             const Department& departament=Department(), UrgencyLevel urgencyLevel=UrgencyLevel::Low,
             InquiryStatus inquiryStatus=InquiryStatus::Pending);
 
+    // Inquiry Operator Overload
+    bool operator==(const Inquiry& other) const;
+
     // Inquiry Attribute Getters
-    User getUser();
-    std::string getMessage();
-    std::string getID();
-    Department getDepartament();
-    UrgencyLevel getUrgencyLevel();
-    InquiryStatus getInquiryStatus();
+    [[nodiscard]] User getUser() const;
+    [[nodiscard]] std::string getMessage() const;
+    [[nodiscard]] std::string getID() const;
+    [[nodiscard]] Department getDepartament() const;
+    [[nodiscard]] UrgencyLevel getUrgencyLevel() const;
+    [[nodiscard]] InquiryStatus getInquiryStatus() const;
 
     // Inquiry Attribute Setters
     void setID(const std::string& inquiryID);

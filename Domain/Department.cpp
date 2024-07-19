@@ -21,6 +21,8 @@ std::string Department::getName() const {
 
 // Object Operator Overload
 Department &Department::operator=(const Department &other) { this->departmentName = other.getName(); }
+bool Department::operator<(const Department &other) const { return this->departmentName < other.getName(); }
+bool Department::operator==(const Department &other) const { return this->departmentName == other.departmentName; }
 
 /// User Class Exception
 // Object Constructor

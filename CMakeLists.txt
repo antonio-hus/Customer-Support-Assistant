@@ -25,8 +25,16 @@ add_executable(
         Domain/Inquiry.cpp
         Domain/InquiryStatus.h
         Domain/UrgencyLevel.h
+        Domain/AIModel.h
+        Domain/AIModel.cpp
         Repository/BankRepository.h
         Repository/BankRepository.cpp
+        Gui/ClientView.h
+        Gui/ClientView.cpp
+        Gui/ClientView.ui
+        Gui/DepartmentView.h
+        Gui/DepartmentView.cpp
+        Gui/DepartmentView.ui
 )
 target_link_libraries(Customer_Support_Assistant
         Qt::Core

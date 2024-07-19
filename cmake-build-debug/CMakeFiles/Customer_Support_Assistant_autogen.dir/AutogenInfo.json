@@ -222,6 +222,12 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/AIModel.h",
+			"MU",
+			"JE6WBJKE3F/moc_AIModel.cpp",
+			null
+		],
+		[
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Department.h",
 			"MU",
 			"JE6WBJKE3F/moc_Department.cpp",
@@ -249,6 +255,18 @@
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/User.h",
 			"MU",
 			"JE6WBJKE3F/moc_User.cpp",
+			null
+		],
+		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ClientView.h",
+			"MU",
+			"EHIEGSSRCT/moc_ClientView.cpp",
+			null
+		],
+		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/DepartmentView.h",
+			"MU",
+			"EHIEGSSRCT/moc_DepartmentView.cpp",
 			null
 		],
 		[
@@ -330,6 +348,11 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/AIModel.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Department.cpp",
 			"MU",
 			null
@@ -341,6 +364,16 @@
 		],
 		[
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/User.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ClientView.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/DepartmentView.cpp",
 			"MU",
 			null
 		],

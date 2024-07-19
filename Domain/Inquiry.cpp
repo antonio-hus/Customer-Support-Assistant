@@ -15,13 +15,16 @@ Inquiry::Inquiry(const User& user, const std::string& message, const std::string
                  UrgencyLevel urgencyLevel, InquiryStatus inquiryStatus):
 user{user}, message{message}, inquiryID{inquiryID}, department{departament}, urgencyLevel{urgencyLevel}, inquiryStatus{inquiryStatus} {}
 
+// Object Operator Overload
+bool Inquiry::operator==(const Inquiry& other) const { return this->inquiryID == other.getID(); }
+
 // Object Attribute Getter
-User Inquiry::getUser() { return this->user; }
-std::string Inquiry::getMessage() { return this->message; }
-std::string Inquiry::getID() { return this->inquiryID; }
-Department Inquiry::getDepartament() { return this->department; }
-UrgencyLevel Inquiry::getUrgencyLevel() { return this->urgencyLevel; }
-InquiryStatus Inquiry::getInquiryStatus() { return this->inquiryStatus; }
+User Inquiry::getUser() const { return this->user; }
+std::string Inquiry::getMessage() const { return this->message; }
+std::string Inquiry::getID() const { return this->inquiryID; }
+Department Inquiry::getDepartament() const { return this->department; }
+UrgencyLevel Inquiry::getUrgencyLevel() const { return this->urgencyLevel; }
+InquiryStatus Inquiry::getInquiryStatus() const { return this->inquiryStatus; }
 
 // Object Attribute Setter
 void Inquiry::setID(const std::string& _inquiryID) { this->inquiryID = _inquiryID; }
