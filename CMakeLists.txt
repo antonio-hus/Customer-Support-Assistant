@@ -47,6 +47,8 @@ add_executable(
         Gui/StatisticsView.cpp
         Gui/StatisticsView.ui
         Utils/ObserverPattern.h
+        Utils/CustomTables.h
+        Utils/CustomTables.cpp
 )
 target_link_libraries(Customer_Support_Assistant
         Qt::Core

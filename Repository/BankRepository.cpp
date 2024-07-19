@@ -11,6 +11,15 @@
 /// CLASS IMPLEMENTATION ///
 ////////////////////////////
 /// BankRepository Class - GET Operations
+int BankRepository::getPendingSize() {return this->pendingList.size(); }
+int BankRepository::getProcessingSize() { return this->processingList.size(); }
+int BankRepository::getProcessingByDepartmentSize(const Department &department) {
+    auto range = this->processingList.equal_range(department);
+    return std::distance(range.first, range.second);
+}
+int BankRepository::getCompletedSize() { return this->completedList.size(); }
+int BankRepository::getDepartmentsSize() { return this->departmentsList.size(); }
+
 std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator>
 BankRepository::getPending() {
     return { this->pendingList.begin(), this->pendingList.end() };
@@ -40,6 +49,7 @@ std::pair<std::vector<Department>::const_iterator, std::vector<Department>::cons
 void BankRepository::addInquiry(Inquiry &inquiry) {
     inquiry.setStatus(InquiryStatus::Pending);
     this->pendingList.push_back(inquiry);
+    this->notify();
 }
 
 void BankRepository::classifyInquiry(Inquiry &inquiry) {
@@ -59,6 +69,7 @@ void BankRepository::classifyInquiry(Inquiry &inquiry) {
 
     // Add in the processingList to the correct department
     this->processingList.insert(std::make_pair(DEPARTMENT, inquiry));
+    this->notify();
 }
 
 void BankRepository::processInquiry(Inquiry &inquiry) {
@@ -72,6 +83,7 @@ void BankRepository::processInquiry(Inquiry &inquiry) {
 
     // Add in the completedList
     this->completedList.push_back(inquiry);
+    this->notify();
 }
 
 // Department Handlers
@@ -79,6 +91,7 @@ void BankRepository::addDepartament(const Department &department) {
 
     // Add in the Departments List
     this->departmentsList.push_back(department);
+    this->notify();
 }
 
 void BankRepository::removeDepartament(const Department &department) {
@@ -97,6 +110,7 @@ void BankRepository::removeDepartament(const Department &department) {
 
     // Erase all inquiries from the processing list
     this->processingList.erase(begin, end);
+    this->notify();
 }
 
 

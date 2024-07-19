@@ -300,6 +300,12 @@
 			null
 		],
 		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/CustomTables.h",
+			"MU",
+			"3AKZUBQRRA/moc_CustomTables.cpp",
+			null
+		],
+		[
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/ObserverPattern.h",
 			"MU",
 			"3AKZUBQRRA/moc_ObserverPattern.cpp",
@@ -429,6 +435,11 @@
 		],
 		[
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Repository/BankRepository.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/CustomTables.cpp",
 			"MU",
 			null
 		],

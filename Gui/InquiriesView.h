@@ -4,7 +4,6 @@
 ///////////////////////
 /// IMPORTS SECTION ///
 //////////////////////
-// C++ Libraries
 // Qt Libraries
 #include <QWidget>
 // Project Libraries

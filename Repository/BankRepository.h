@@ -38,6 +38,11 @@ protected:
 
 public:
     /// GET Operations
+    int getPendingSize();
+    int getProcessingSize();
+    int getProcessingByDepartmentSize(const Department &department);
+    int getCompletedSize();
+    int getDepartmentsSize();
     std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> getPending();
     std::pair<std::multimap<Department, Inquiry>::const_iterator, std::multimap<Department, Inquiry>::const_iterator> getProcessing();
     std::pair<std::multimap<Department, Inquiry>::const_iterator, std::multimap<Department, Inquiry>::const_iterator> getProcessingByDepartment(const Department& department);
