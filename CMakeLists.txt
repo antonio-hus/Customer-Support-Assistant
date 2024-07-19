@@ -19,8 +19,8 @@ add_executable(
         main.cpp
         Domain/User.h
         Domain/User.cpp
-        Domain/Departament.h
-        Domain/Departament.cpp
+        Domain/Department.h
+        Domain/Department.cpp
         Domain/Bank.h
         Domain/Bank.cpp
         Domain/Inquiry.h
