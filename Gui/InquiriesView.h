@@ -6,13 +6,13 @@
 #define CUSTOMER_SUPPORT_ASSISTANT_INQUIRIESVIEW_H
 
 #include <QWidget>
-
+#include "../Utils/ObserverPattern.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class InquiriesView; }
 QT_END_NAMESPACE
 
-class InquiriesView : public QWidget {
+class InquiriesView : public QWidget, public Observer {
 Q_OBJECT
 
 public:

@@ -40,6 +40,7 @@ add_executable(
         Gui/InquiriesView.h
         Gui/InquiriesView.cpp
         Gui/InquiriesView.ui
+        Utils/ObserverPattern.h
 )
 target_link_libraries(Customer_Support_Assistant
         Qt::Core

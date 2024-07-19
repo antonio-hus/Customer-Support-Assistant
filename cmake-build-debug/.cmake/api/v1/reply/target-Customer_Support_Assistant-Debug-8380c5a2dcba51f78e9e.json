@@ -210,7 +210,7 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 44,
+				"line" : 45,
 				"parent" : 0
 			}
 		]
@@ -329,11 +329,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "Customer_Support_Assistant_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "Customer_Support_Assistant_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "Customer_Support_Assistant_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "Customer_Support_Assistant::@6890427a1f51a3e7e1df",
@@ -449,7 +449,8 @@
 				22,
 				25,
 				26,
-				27
+				27,
+				28
 			]
 		},
 		{
@@ -459,14 +460,14 @@
 				18,
 				21,
 				24,
-				28
+				29
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				29
+				30
 			]
 		}
 	],
@@ -608,6 +609,11 @@
 			"backtrace" : 1,
 			"path" : "Gui/InquiriesView.ui",
 			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Utils/ObserverPattern.h",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,

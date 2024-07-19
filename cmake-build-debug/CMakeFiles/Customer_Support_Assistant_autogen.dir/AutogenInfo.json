@@ -286,6 +286,12 @@
 			"MU",
 			"RSXGBB323P/moc_BankRepository.cpp",
 			null
+		],
+		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/ObserverPattern.h",
+			"MU",
+			"3AKZUBQRRA/moc_ObserverPattern.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],

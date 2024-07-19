@@ -14,12 +14,13 @@
 #include "../Domain/Inquiry.h"
 #include "../Domain/InquiryStatus.h"
 #include "../Domain/UrgencyLevel.h"
+#include "../Utils/ObserverPattern.h"
 
 ////////////////////////
 /// CLASS DEFINITION ///
 ///////////////////////
 // Bank Repository - Local Storage
-class BankRepository {
+class BankRepository: public Subject {
 protected:
 
     // Pending Inquiries List

@@ -6,13 +6,13 @@
 #define CUSTOMER_SUPPORT_ASSISTANT_DEPARTMENTVIEW_H
 
 #include <QWidget>
-
+#include "../Utils/ObserverPattern.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class DepartmentView; }
 QT_END_NAMESPACE
 
-class DepartmentView : public QWidget {
+class DepartmentView : public QWidget, public Observer {
 Q_OBJECT
 
 public:
