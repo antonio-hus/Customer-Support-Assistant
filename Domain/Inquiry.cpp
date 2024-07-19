@@ -11,9 +11,9 @@
 ////////////////////////////
 /// Inquiry Class
 // Object Constructor
-Inquiry::Inquiry(const User& user, const std::string& message, const std::string& inquiryID, const Department& departament,
-                 UrgencyLevel urgencyLevel, InquiryStatus inquiryStatus):
-user{user}, message{message}, inquiryID{inquiryID}, department{departament}, urgencyLevel{urgencyLevel}, inquiryStatus{inquiryStatus} {}
+Inquiry::Inquiry(const User& user, const std::string& message, const std::string& inquiryID, const Department& departament, UrgencyLevel urgencyLevel, InquiryStatus inquiryStatus):
+user{user}, message{message}, inquiryID{inquiryID}, department{departament}, urgencyLevel{urgencyLevel}, inquiryStatus{inquiryStatus}
+{InquiryValidator::checkInquiry(*this); }
 
 // Object Operator Overload
 bool Inquiry::operator==(const Inquiry& other) const { return this->inquiryID == other.getID(); }

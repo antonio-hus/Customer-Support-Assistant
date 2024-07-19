@@ -210,7 +210,7 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 39,
+				"line" : 44,
 				"parent" : 0
 			}
 		]
@@ -320,7 +320,9 @@
 				11,
 				13,
 				15,
-				18
+				17,
+				20,
+				23
 			]
 		}
 	],
@@ -425,7 +427,9 @@
 				11,
 				13,
 				15,
-				18
+				17,
+				20,
+				23
 			]
 		},
 		{
@@ -440,25 +444,29 @@
 				10,
 				12,
 				14,
-				17,
-				20,
-				21
+				16,
+				19,
+				22,
+				25,
+				26,
+				27
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				16,
-				19,
-				22
+				18,
+				21,
+				24,
+				28
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				23
+				29
 			]
 		}
 	],
@@ -544,6 +552,17 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "Controller/BankController.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Controller/BankController.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "Gui/ClientView.h",
 			"sourceGroupIndex" : 1
 		},
@@ -575,6 +594,22 @@
 			"sourceGroupIndex" : 2
 		},
 		{
+			"backtrace" : 1,
+			"path" : "Gui/InquiriesView.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Gui/InquiriesView.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Gui/InquiriesView.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "cmake-build-debug/Customer_Support_Assistant_autogen/include/Gui/ui_ClientView.h",
@@ -584,6 +619,12 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "cmake-build-debug/Customer_Support_Assistant_autogen/include/Gui/ui_DepartmentView.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/Customer_Support_Assistant_autogen/include/Gui/ui_InquiriesView.h",
 			"sourceGroupIndex" : 1
 		},
 		{

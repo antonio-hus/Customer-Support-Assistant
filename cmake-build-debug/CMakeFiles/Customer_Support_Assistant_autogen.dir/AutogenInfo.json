@@ -222,6 +222,12 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Controller/BankController.h",
+			"MU",
+			"TTE4PTQQBL/moc_BankController.cpp",
+			null
+		],
+		[
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/AIModel.h",
 			"MU",
 			"JE6WBJKE3F/moc_AIModel.cpp",
@@ -267,6 +273,12 @@
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/DepartmentView.h",
 			"MU",
 			"EHIEGSSRCT/moc_DepartmentView.cpp",
+			null
+		],
+		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/InquiriesView.h",
+			"MU",
+			"EHIEGSSRCT/moc_InquiriesView.cpp",
 			null
 		],
 		[
@@ -348,6 +360,11 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Controller/BankController.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/AIModel.cpp",
 			"MU",
 			null
@@ -374,6 +391,11 @@
 		],
 		[
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/DepartmentView.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/InquiriesView.cpp",
 			"MU",
 			null
 		],

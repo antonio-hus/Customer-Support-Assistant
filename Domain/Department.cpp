@@ -12,7 +12,7 @@
 ////////////////////////////
 /// Department Class
 // Object Constructor
-Department::Department(std::string name): departmentName{std::move(name)} {}
+Department::Department(std::string name): departmentName{std::move(name)} {DepartmentValidator::checkDepartment(*this); }
 
 // Object Attribute Getters
 std::string Department::getName() const {

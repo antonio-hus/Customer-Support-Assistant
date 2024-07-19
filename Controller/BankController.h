@@ -1,5 +1,5 @@
-#ifndef CUSTOMER_SUPPORT_ASSISTANT_BANKREPOSITORY_H
-#define CUSTOMER_SUPPORT_ASSISTANT_BANKREPOSITORY_H
+#ifndef CUSTOMER_SUPPORT_ASSISTANT_BANKCONTROLLER_H
+#define CUSTOMER_SUPPORT_ASSISTANT_BANKCONTROLLER_H
 
 ///////////////////////
 /// IMPORTS SECTION ///
@@ -8,34 +8,42 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <exception>
 // Project Libraries
 #include "../Domain/User.h"
 #include "../Domain/Department.h"
 #include "../Domain/Inquiry.h"
 #include "../Domain/InquiryStatus.h"
 #include "../Domain/UrgencyLevel.h"
+#include "../Repository/BankRepository.h"
+
 
 ////////////////////////
 /// CLASS DEFINITION ///
 ///////////////////////
-// Bank Repository - Local Storage
-class BankRepository {
-protected:
+// BankController
+class BankController {
+private:
 
-    // Pending Inquiries List
-    std::vector<Inquiry> pendingList;
+    // Persistent Data
+    BankRepository* repository;
 
-    // Processing Inquiries List
-    // MultiMap - Key, Values Pairs - Department & Processing Inquiries
-    std::multimap<Department, Inquiry> processingList;
-
-    // Completed Inquiries List
-    std::vector<Inquiry> completedList;
-
-    // Departments List
-    std::vector<Department> departmentsList;
+    // Runtime Data
+    std::vector<User*> users;
+    std::vector<Department*> departments;
+    std::vector<Inquiry*> inquiries;
 
 public:
+
+    /// Constructor
+    explicit BankController(BankRepository* repository);
+    ~BankController();
+
+    /// Object Builder Methods
+    User* createUser(const std::string& username);
+    Inquiry* createInquiry(const std::string& username, const std::string& message);
+    Department* createDepartment(const std::string& departamentName="None");
+
     /// GET Operations
     std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> getPending();
     std::pair<std::multimap<Department, Inquiry>::const_iterator, std::multimap<Department, Inquiry>::const_iterator> getProcessing();
@@ -55,16 +63,6 @@ public:
     // Removes a departament from the list and multimap
     // All inquiries are set back to pending for reclassification
     void removeDepartament(const Department& department);
-
-};
-
-//////////////////////////
-/// DERIVED DEFINITION ///
-//////////////////////////
-// Bank Repository - Cloud Storage - MongoDB
-class CloudBankRepository: public BankRepository {
-public:
-
 };
 
 

@@ -105,6 +105,14 @@ build CMakeFiles/Customer_Support_Assistant.dir/Repository/BankRepository.cpp.ob
   OBJECT_DIR = CMakeFiles\Customer_Support_Assistant.dir
   OBJECT_FILE_DIR = CMakeFiles\Customer_Support_Assistant.dir\Repository
 
+build CMakeFiles/Customer_Support_Assistant.dir/Controller/BankController.cpp.obj: CXX_COMPILER__Customer_Support_Assistant_unscanned_Debug C$:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Controller/BankController.cpp || cmake_object_order_depends_target_Customer_Support_Assistant
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Customer_Support_Assistant.dir\Controller\BankController.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -isystem C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/Customer_Support_Assistant_autogen/include -isystem C:/Qt/6.7.0/mingw_64/include/QtCore -isystem C:/Qt/6.7.0/mingw_64/include -isystem C:/Qt/6.7.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.0/mingw_64/include/QtGui -isystem C:/Qt/6.7.0/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\Customer_Support_Assistant.dir
+  OBJECT_FILE_DIR = CMakeFiles\Customer_Support_Assistant.dir\Controller
+
 build CMakeFiles/Customer_Support_Assistant.dir/Gui/ClientView.cpp.obj: CXX_COMPILER__Customer_Support_Assistant_unscanned_Debug C$:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ClientView.cpp || cmake_object_order_depends_target_Customer_Support_Assistant
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\Customer_Support_Assistant.dir\Gui\ClientView.cpp.obj.d
@@ -121,6 +129,14 @@ build CMakeFiles/Customer_Support_Assistant.dir/Gui/DepartmentView.cpp.obj: CXX_
   OBJECT_DIR = CMakeFiles\Customer_Support_Assistant.dir
   OBJECT_FILE_DIR = CMakeFiles\Customer_Support_Assistant.dir\Gui
 
+build CMakeFiles/Customer_Support_Assistant.dir/Gui/InquiriesView.cpp.obj: CXX_COMPILER__Customer_Support_Assistant_unscanned_Debug C$:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/InquiriesView.cpp || cmake_object_order_depends_target_Customer_Support_Assistant
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Customer_Support_Assistant.dir\Gui\InquiriesView.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -isystem C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/Customer_Support_Assistant_autogen/include -isystem C:/Qt/6.7.0/mingw_64/include/QtCore -isystem C:/Qt/6.7.0/mingw_64/include -isystem C:/Qt/6.7.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.0/mingw_64/include/QtGui -isystem C:/Qt/6.7.0/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\Customer_Support_Assistant.dir
+  OBJECT_FILE_DIR = CMakeFiles\Customer_Support_Assistant.dir\Gui
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Customer_Support_Assistant
@@ -129,7 +145,7 @@ build CMakeFiles/Customer_Support_Assistant.dir/Gui/DepartmentView.cpp.obj: CXX_
 #############################################
 # Link the executable Customer_Support_Assistant.exe
 
-build Customer_Support_Assistant.exe: CXX_EXECUTABLE_LINKER__Customer_Support_Assistant_Debug CMakeFiles/Customer_Support_Assistant.dir/Customer_Support_Assistant_autogen/mocs_compilation.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/main.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/Domain/User.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/Domain/Department.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/Domain/Inquiry.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/Domain/AIModel.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/Repository/BankRepository.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/Gui/ClientView.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/Gui/DepartmentView.cpp.obj | C$:/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.0/mingw_64/lib/libQt6Core.a || Customer_Support_Assistant_autogen Customer_Support_Assistant_autogen_timestamp_deps
+build Customer_Support_Assistant.exe: CXX_EXECUTABLE_LINKER__Customer_Support_Assistant_Debug CMakeFiles/Customer_Support_Assistant.dir/Customer_Support_Assistant_autogen/mocs_compilation.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/main.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/Domain/User.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/Domain/Department.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/Domain/Inquiry.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/Domain/AIModel.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/Repository/BankRepository.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/Controller/BankController.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/Gui/ClientView.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/Gui/DepartmentView.cpp.obj CMakeFiles/Customer_Support_Assistant.dir/Gui/InquiriesView.cpp.obj | C$:/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.0/mingw_64/lib/libQt6Core.a || Customer_Support_Assistant_autogen Customer_Support_Assistant_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = C:/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.7.0/mingw_64/lib/libQt6Gui.a  C:/Qt/6.7.0/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -latomic  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Customer_Support_Assistant.dir
@@ -172,7 +188,7 @@ build Customer_Support_Assistant_autogen_timestamp_deps: phony CMakeFiles/Custom
 #############################################
 # Utility command for Customer_Support_Assistant_autogen
 
-build Customer_Support_Assistant_autogen: phony CMakeFiles/Customer_Support_Assistant_autogen Customer_Support_Assistant_autogen/include/Gui/ui_ClientView.h Customer_Support_Assistant_autogen/include/Gui/ui_DepartmentView.h Customer_Support_Assistant_autogen/timestamp Customer_Support_Assistant_autogen/mocs_compilation.cpp Customer_Support_Assistant_autogen_timestamp_deps
+build Customer_Support_Assistant_autogen: phony CMakeFiles/Customer_Support_Assistant_autogen Customer_Support_Assistant_autogen/include/Gui/ui_ClientView.h Customer_Support_Assistant_autogen/include/Gui/ui_DepartmentView.h Customer_Support_Assistant_autogen/include/Gui/ui_InquiriesView.h Customer_Support_Assistant_autogen/timestamp Customer_Support_Assistant_autogen/mocs_compilation.cpp Customer_Support_Assistant_autogen_timestamp_deps
 
 
 #############################################
@@ -194,7 +210,7 @@ build CMakeFiles/Customer_Support_Assistant_autogen_timestamp_deps | ${cmake_nin
 #############################################
 # Phony custom command for CMakeFiles\Customer_Support_Assistant_autogen
 
-build CMakeFiles/Customer_Support_Assistant_autogen Customer_Support_Assistant_autogen/include/Gui/ui_ClientView.h Customer_Support_Assistant_autogen/include/Gui/ui_DepartmentView.h | ${cmake_ninja_workdir}CMakeFiles/Customer_Support_Assistant_autogen ${cmake_ninja_workdir}Customer_Support_Assistant_autogen/include/Gui/ui_ClientView.h ${cmake_ninja_workdir}Customer_Support_Assistant_autogen/include/Gui/ui_DepartmentView.h: phony Customer_Support_Assistant_autogen/timestamp || Customer_Support_Assistant_autogen_timestamp_deps
+build CMakeFiles/Customer_Support_Assistant_autogen Customer_Support_Assistant_autogen/include/Gui/ui_ClientView.h Customer_Support_Assistant_autogen/include/Gui/ui_DepartmentView.h Customer_Support_Assistant_autogen/include/Gui/ui_InquiriesView.h | ${cmake_ninja_workdir}CMakeFiles/Customer_Support_Assistant_autogen ${cmake_ninja_workdir}Customer_Support_Assistant_autogen/include/Gui/ui_ClientView.h ${cmake_ninja_workdir}Customer_Support_Assistant_autogen/include/Gui/ui_DepartmentView.h ${cmake_ninja_workdir}Customer_Support_Assistant_autogen/include/Gui/ui_InquiriesView.h: phony Customer_Support_Assistant_autogen/timestamp || Customer_Support_Assistant_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

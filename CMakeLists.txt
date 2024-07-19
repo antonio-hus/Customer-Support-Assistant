@@ -29,12 +29,17 @@ add_executable(
         Domain/AIModel.cpp
         Repository/BankRepository.h
         Repository/BankRepository.cpp
+        Controller/BankController.h
+        Controller/BankController.cpp
         Gui/ClientView.h
         Gui/ClientView.cpp
         Gui/ClientView.ui
         Gui/DepartmentView.h
         Gui/DepartmentView.cpp
         Gui/DepartmentView.ui
+        Gui/InquiriesView.h
+        Gui/InquiriesView.cpp
+        Gui/InquiriesView.ui
 )
 target_link_libraries(Customer_Support_Assistant
         Qt::Core

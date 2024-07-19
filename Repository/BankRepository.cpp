@@ -50,6 +50,9 @@ void BankRepository::classifyInquiry(Inquiry &inquiry) {
     // Set the Inquiry Status
     inquiry.setStatus(InquiryStatus::InProgress);
 
+    // Set the Inquiry Urgency
+    inquiry.setUrgencyLevel(UrgencyLevel::Low); // TODO: Change with AI Classification
+
     // Set the Department
     Department DEPARTMENT = this->departmentsList[0]; // TODO: Change with AI Classification
     inquiry.setDepartment(DEPARTMENT);
