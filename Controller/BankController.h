@@ -42,9 +42,10 @@ public:
     /// Object Builder Methods
     User* createUser(const std::string& username);
     Inquiry* createInquiry(const std::string& username, const std::string& message);
-    Department* createDepartment(const std::string& departamentName="None");
+    Department* createDepartment(const std::string& departamentName="Unclassified");
 
     /// GET Operations
+    std::vector<Inquiry*> getInquiries();
     std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> getPending();
     std::pair<std::multimap<Department, Inquiry>::const_iterator, std::multimap<Department, Inquiry>::const_iterator> getProcessing();
     std::pair<std::multimap<Department, Inquiry>::const_iterator, std::multimap<Department, Inquiry>::const_iterator> getProcessingByDepartment(const Department& department);

@@ -35,7 +35,7 @@ public:
 
     // Inquiry Constructor
     Inquiry(const User& user, const std::string& message, const std::string& inquiryID="-1",
-            const Department& departament=Department(), UrgencyLevel urgencyLevel=UrgencyLevel::Low,
+            const Department& departament=Department("Unclassified"), UrgencyLevel urgencyLevel=UrgencyLevel::Low,
             InquiryStatus inquiryStatus=InquiryStatus::Pending);
 
     // Inquiry Operator Overload

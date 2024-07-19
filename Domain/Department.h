@@ -18,7 +18,7 @@ private:
     std::string departmentName;
 
 public:
-    explicit Department(std::string name="None");
+    explicit Department(std::string name="Unclassified");
     [[nodiscard]] std::string getName() const;
     Department& operator=(const Department& other);
     bool operator<(const Department& other) const;

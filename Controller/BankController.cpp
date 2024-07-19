@@ -45,6 +45,8 @@ Department *BankController::createDepartment(const std::string& departamentName)
 
 
 /// BankController Class - GET Operations
+std::vector<Inquiry *> BankController::getInquiries() { return this->inquiries; }
+
 std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator>
 BankController::getPending() { return this->repository->getPending(); }
 
