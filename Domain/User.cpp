@@ -19,7 +19,6 @@ std::string User::getUsername() const {
     return this->username;
 }
 
-
 /// User Class Exception
 // Object Constructor
 UserException::UserException(std::string message): exceptionMessage(std::move(message)){}

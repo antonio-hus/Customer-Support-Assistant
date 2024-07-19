@@ -8,6 +8,7 @@
 #include <string>
 #include <stdexcept>
 
+
 ////////////////////////
 /// CLASS DEFINITION ///
 ///////////////////////
@@ -17,6 +18,7 @@ enum class InquiryStatus {
     InProgress,
     Completed
 };
+
 
 /////////////////////
 /// CLASS METHODS ///
