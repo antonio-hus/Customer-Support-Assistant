@@ -8,6 +8,7 @@
 #include <QWidget>
 // Project Libraries
 #include "../Controller/BankController.h"
+#include "../Utils/CustomTables.h"
 #include "../Utils/ObserverPattern.h"
 
 

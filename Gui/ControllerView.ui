@@ -15,22 +15,6 @@
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
-    <widget class="QPushButton" name="createInquiryButton">
-     <property name="minimumSize">
-      <size>
-       <width>100</width>
-       <height>100</height>
-      </size>
-     </property>
-     <property name="text">
-      <string>Create Inquiry</string>
-     </property>
-     <property name="default">
-      <bool>false</bool>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="QPushButton" name="viewInquiriesButton">
      <property name="minimumSize">
       <size>
@@ -39,7 +23,7 @@
       </size>
      </property>
      <property name="text">
-      <string>View Inquiries</string>
+      <string>View Inquiry Statuses</string>
      </property>
      <property name="default">
       <bool>false</bool>

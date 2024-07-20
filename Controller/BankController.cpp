@@ -35,6 +35,12 @@ Inquiry BankController::createInquiry(const std::string &username, const std::st
 
 
 /// BankController Class - GET Operations
+unsigned long long BankController::getPendingSize() { return this->repository->getPendingSize(); }
+unsigned long long BankController::getProcessingSize() { return this->repository->getProcessingSize(); }
+unsigned long long BankController::getProcessingByDepartmentSize(const Department &department) { return this->repository->getProcessingByDepartmentSize(department); }
+unsigned long long BankController::getProcessingByAgentSize(const Agent &agent) { return this->repository->getProcessingByAgentSize(agent); }
+unsigned long long BankController::getCompletedSize() { return this->repository->getCompletedSize(); }
+
 std::vector<Inquiry> BankController::getInquiries() { return this->inquiries; }
 
 std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator>

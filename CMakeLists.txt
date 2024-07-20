@@ -32,6 +32,9 @@ add_executable(
         Repository/BankRepository.cpp
         Controller/BankController.h
         Controller/BankController.cpp
+        Gui/ConfigurationView.h
+        Gui/ConfigurationView.cpp
+        Gui/ConfigurationView.ui
         Gui/ControllerView.h
         Gui/ControllerView.cpp
         Gui/ControllerView.ui

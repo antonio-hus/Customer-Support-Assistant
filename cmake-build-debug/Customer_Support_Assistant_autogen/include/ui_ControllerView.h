@@ -21,7 +21,6 @@ class Ui_ControllerView
 {
 public:
     QHBoxLayout *horizontalLayout;
-    QPushButton *createInquiryButton;
     QPushButton *viewInquiriesButton;
     QPushButton *viewStatisticsButton;
 
@@ -32,12 +31,6 @@ public:
         ControllerView->resize(400, 173);
         horizontalLayout = new QHBoxLayout(ControllerView);
         horizontalLayout->setObjectName("horizontalLayout");
-        createInquiryButton = new QPushButton(ControllerView);
-        createInquiryButton->setObjectName("createInquiryButton");
-        createInquiryButton->setMinimumSize(QSize(100, 100));
-
-        horizontalLayout->addWidget(createInquiryButton);
-
         viewInquiriesButton = new QPushButton(ControllerView);
         viewInquiriesButton->setObjectName("viewInquiriesButton");
         viewInquiriesButton->setMinimumSize(QSize(100, 100));
@@ -53,7 +46,6 @@ public:
 
         retranslateUi(ControllerView);
 
-        createInquiryButton->setDefault(false);
         viewInquiriesButton->setDefault(false);
         viewStatisticsButton->setDefault(false);
 
@@ -64,8 +56,7 @@ public:
     void retranslateUi(QWidget *ControllerView)
     {
         ControllerView->setWindowTitle(QCoreApplication::translate("ControllerView", "ControllerView", nullptr));
-        createInquiryButton->setText(QCoreApplication::translate("ControllerView", "Create Inquiry", nullptr));
-        viewInquiriesButton->setText(QCoreApplication::translate("ControllerView", "View Inquiries", nullptr));
+        viewInquiriesButton->setText(QCoreApplication::translate("ControllerView", "View Inquiry Statuses", nullptr));
         viewStatisticsButton->setText(QCoreApplication::translate("ControllerView", "View Statistics", nullptr));
     } // retranslateUi
 

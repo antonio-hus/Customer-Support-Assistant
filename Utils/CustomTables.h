@@ -8,7 +8,7 @@
 // Qt Libraries
 #include <QAbstractTableModel>
 // Project Libraries
-#include "../Repository/BankRepository.h"
+#include "../Controller/BankController.h"
 
 
 ////////////////////////
@@ -17,10 +17,10 @@
 // Pending Inquiries Table Model
 class PendingTable: public QAbstractTableModel {
 private:
-    BankRepository* repository;
+    BankController* controller;
 
 public:
-    explicit PendingTable(BankRepository* repository): repository(repository) {};
+    explicit PendingTable(BankController* controller): controller(controller) {};
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
@@ -30,10 +30,10 @@ public:
 // Processing Inquiries Table Model
 class ProcessingTable: public QAbstractTableModel {
 private:
-    BankRepository* repository;
+    BankController* controller;
 
 public:
-    explicit ProcessingTable(BankRepository* repository): repository(repository) {};
+    explicit ProcessingTable(BankController* controller): controller(controller) {};
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
@@ -43,10 +43,10 @@ public:
 // Completed Inquiries Table Model
 class CompletedTable: public QAbstractTableModel {
 private:
-    BankRepository* repository;
+    BankController* controller;
 
 public:
-    explicit CompletedTable(BankRepository* repository): repository(repository) {};
+    explicit CompletedTable(BankController* controller): controller(controller) {};
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
@@ -56,11 +56,11 @@ public:
 // Department Inquiries Table Model
 class DepartmentTable: public QAbstractTableModel {
 private:
-    BankRepository* repository;
+    BankController* controller;
     Department department;
 
 public:
-    explicit DepartmentTable(BankRepository* repository, Department department): repository(repository), department(department) {};
+    explicit DepartmentTable(BankController* controller, Department department): controller(controller), department(department) {};
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
@@ -70,11 +70,11 @@ public:
 // Agent Inquiries Table Model
 class AgentTable: public QAbstractTableModel {
 private:
-    BankRepository* repository;
+    BankController* controller;
     Agent agent;
 
 public:
-    explicit AgentTable(BankRepository* repository, Agent agent): repository(repository), agent(agent) {};
+    explicit AgentTable(BankController* controller, Agent agent): controller(controller), agent(agent) {};
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;

@@ -18,13 +18,6 @@ ControllerView::ControllerView(BankController* controller, QWidget *parent) :
     ui->setupUi(this);
 
     /// GUI Handlers
-    // Create Inquiry Button
-    // Open a Client View screen
-    connect(ui->createInquiryButton, &QPushButton::clicked, [=, this]{
-        auto* clientView = new ClientView(controller, this);
-        clientView->show();
-    });
-
     // View Inquiries Button
     // Open an Inquiries View screen
     connect(ui->viewInquiriesButton, &QPushButton::clicked, [=, this]{

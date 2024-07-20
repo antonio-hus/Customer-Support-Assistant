@@ -41,6 +41,11 @@ public:
     Inquiry createInquiry(const std::string& username, const std::string& firstname, const std::string& lastname, const std::string& email, const std::string& phonenumber, const std::string& message);
 
     /// GET Operations
+    unsigned long long getPendingSize();
+    unsigned long long getProcessingSize();
+    unsigned long long getProcessingByDepartmentSize(const Department &department);
+    unsigned long long getProcessingByAgentSize(const Agent &agent);
+    unsigned long long getCompletedSize();
     std::vector<Inquiry> getInquiries();
     std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> getPending();
     std::pair<std::unordered_map<Department, std::unordered_multimap<Agent, Inquiry>>::const_iterator, std::unordered_map<Department, std::unordered_multimap<Agent, Inquiry>>::const_iterator> getProcessing();

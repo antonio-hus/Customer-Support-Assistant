@@ -10,7 +10,7 @@
 ////////////////////////////
 // Pending Inquiries Table Model Implementation
 int PendingTable::rowCount(const QModelIndex &parent) const {
-    return this->repository->getPendingSize();
+    return this->controller->getPendingSize();
 }
 
 int PendingTable::columnCount(const QModelIndex &parent) const {
@@ -32,7 +32,7 @@ QVariant PendingTable::data(const QModelIndex &index, int role) const {
         int col = index.column();
 
         // Get the range of pending inquiries
-        auto [begin, end] = this->repository->getPending();
+        auto [begin, end] = this->controller->getPending();
 
         // Out of bounds
         if (row >= std::distance(begin, end)) {
@@ -61,7 +61,7 @@ QVariant PendingTable::data(const QModelIndex &index, int role) const {
 
 // Processing Inquiries Table Model Implementation
 int ProcessingTable::rowCount(const QModelIndex &parent) const {
-    return this->repository->getProcessingSize();
+    return this->controller->getProcessingSize();
 }
 
 int ProcessingTable::columnCount(const QModelIndex &parent) const {
@@ -83,7 +83,7 @@ QVariant ProcessingTable::data(const QModelIndex &index, int role) const {
         int col = index.column();
 
         // Get the range of pending inquiries
-        auto [begin, end] = this->repository->getProcessing();
+        auto [begin, end] = this->controller->getProcessing();
 
         // Out of bounds
         if (row >= std::distance(begin, end)) {
@@ -116,7 +116,7 @@ QVariant ProcessingTable::data(const QModelIndex &index, int role) const {
 
 // Completed Inquiries Table Model Implementation
 int CompletedTable::rowCount(const QModelIndex &parent) const {
-    return this->repository->getCompletedSize();
+    return this->controller->getCompletedSize();
 }
 
 int CompletedTable::columnCount(const QModelIndex &parent) const {
@@ -137,7 +137,7 @@ QVariant CompletedTable::data(const QModelIndex &index, int role) const {
         int col = index.column();
 
         // Get the range of pending inquiries
-        auto [begin, end] = this->repository->getCompleted();
+        auto [begin, end] = this->controller->getCompleted();
 
         // Out of bounds
         if (row >= std::distance(begin, end)) {
@@ -166,7 +166,7 @@ QVariant CompletedTable::data(const QModelIndex &index, int role) const {
 
 // Department Inquiries Table Model Implementation
 int DepartmentTable::rowCount(const QModelIndex &parent) const {
-    return this->repository->getProcessingByDepartmentSize(this->department);
+    return this->controller->getProcessingByDepartmentSize(this->department);
 }
 
 int DepartmentTable::columnCount(const QModelIndex &parent) const {
@@ -187,7 +187,7 @@ QVariant DepartmentTable::data(const QModelIndex &index, int role) const {
         int col = index.column();
 
         // Get the range of pending inquiries
-        auto [begin, end] = this->repository->getProcessingByDepartment(this->department);
+        auto [begin, end] = this->controller->getProcessingByDepartment(this->department);
 
         // Out of bounds
         if (row >= std::distance(begin, end)) {
@@ -220,7 +220,7 @@ QVariant DepartmentTable::data(const QModelIndex &index, int role) const {
 
 // Agent Inquiries Table Model Implementation
 int AgentTable::rowCount(const QModelIndex &parent) const {
-    return this->repository->getProcessingByAgentSize(this->agent);
+    return this->controller->getProcessingByAgentSize(this->agent);
 }
 
 int AgentTable::columnCount(const QModelIndex &parent) const {
@@ -241,7 +241,7 @@ QVariant AgentTable::data(const QModelIndex &index, int role) const {
         int col = index.column();
 
         // Get the range of pending inquiries
-        auto [begin, end] = this->repository->getProcessingByAgent(this->agent);
+        auto [begin, end] = this->controller->getProcessingByAgent(this->agent);
 
         // Out of bounds
         if (row >= std::distance(begin, end)) {

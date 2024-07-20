@@ -280,11 +280,13 @@ Customer_Support_Assistant_autogen/timestamp: \
 	C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
 	C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
 	C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
+	C:/Qt/6.7.0/mingw_64/include/QtCore/QAbstractTableModel \
 	C:/Qt/6.7.0/mingw_64/include/QtCore/QMap \
 	C:/Qt/6.7.0/mingw_64/include/QtCore/q20functional.h \
 	C:/Qt/6.7.0/mingw_64/include/QtCore/q20memory.h \
 	C:/Qt/6.7.0/mingw_64/include/QtCore/q20type_traits.h \
 	C:/Qt/6.7.0/mingw_64/include/QtCore/q23utility.h \
+	C:/Qt/6.7.0/mingw_64/include/QtCore/qabstractitemmodel.h \
 	C:/Qt/6.7.0/mingw_64/include/QtCore/qalgorithms.h \
 	C:/Qt/6.7.0/mingw_64/include/QtCore/qanystringview.h \
 	C:/Qt/6.7.0/mingw_64/include/QtCore/qarraydata.h \
@@ -427,7 +429,11 @@ Customer_Support_Assistant_autogen/timestamp: \
 	C:/Qt/6.7.0/mingw_64/include/QtGui/qtransform.h \
 	C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs.h \
 	C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+	C:/Qt/6.7.0/mingw_64/include/QtWidgets/QMessageBox \
 	C:/Qt/6.7.0/mingw_64/include/QtWidgets/QWidget \
+	C:/Qt/6.7.0/mingw_64/include/QtWidgets/qdialog.h \
+	C:/Qt/6.7.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+	C:/Qt/6.7.0/mingw_64/include/QtWidgets/qmessagebox.h \
 	C:/Qt/6.7.0/mingw_64/include/QtWidgets/qsizepolicy.h \
 	C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
 	C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
@@ -584,6 +590,8 @@ Customer_Support_Assistant_autogen/timestamp: \
 	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/User.h \
 	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ClientView.cpp \
 	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ClientView.h \
+	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ConfigurationView.cpp \
+	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ConfigurationView.h \
 	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ControllerView.cpp \
 	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ControllerView.h \
 	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/DepartmentView.cpp \
@@ -605,6 +613,7 @@ Customer_Support_Assistant_autogen/timestamp: \
 	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/Customer_Support_Assistant_autogen/moc_predefs.h \
 	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/main.cpp \
 	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ClientView.ui \
+	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ConfigurationView.ui \
 	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ControllerView.ui \
 	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/DepartmentView.ui \
 	C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/InquiriesView.ui \

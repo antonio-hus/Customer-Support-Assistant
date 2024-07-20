@@ -270,6 +270,12 @@
 			null
 		],
 		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ConfigurationView.h",
+			"MU",
+			"EHIEGSSRCT/moc_ConfigurationView.cpp",
+			null
+		],
+		[
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ControllerView.h",
 			"MU",
 			"EHIEGSSRCT/moc_ControllerView.cpp",
@@ -416,6 +422,11 @@
 		],
 		[
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ClientView.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ConfigurationView.cpp",
 			"MU",
 			null
 		],
