@@ -22,8 +22,6 @@ add_executable(
         Domain/User.cpp
         Domain/Agent.h
         Domain/Agent.cpp
-        Domain/Department.h
-        Domain/Department.cpp
         Domain/Inquiry.h
         Domain/Inquiry.cpp
         Domain/InquiryStatus.h

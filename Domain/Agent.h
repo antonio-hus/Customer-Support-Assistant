@@ -7,6 +7,7 @@
 // C++ Libraries
 #include <string>
 #include <exception>
+#include "Department.h"
 
 
 ////////////////////////
@@ -16,11 +17,14 @@
 class Agent {
 private:
     int agentID;
+    Department department;
 
 public:
-    explicit Agent(int agentID);
+    explicit Agent(int agentID, Department department);
     [[nodiscard]] int getAgentID() const;
-
+    [[nodiscard]] Department getDepartment() const;
+    bool operator<(const Agent& other) const;
+    bool operator==(const Agent& other) const;
 };
 
 

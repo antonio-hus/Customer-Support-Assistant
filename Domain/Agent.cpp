@@ -12,12 +12,15 @@
 ////////////////////////////
 /// Agent Class
 // Object Constructor
-Agent::Agent(int agentID): agentID{agentID} { AgentValidator::checkAgent(*this); }
+Agent::Agent(int agentID, Department department): agentID{agentID}, department{department} { AgentValidator::checkAgent(*this); }
 
 // Object Attribute Getters
-int Agent::getAgentID() const {
-    return this->agentID;
-}
+int Agent::getAgentID() const { return this->agentID; }
+Department Agent::getDepartment() const { return this->department; }
+
+// Object Operator Overload Methods
+bool Agent::operator==(const Agent &other) const { return this->agentID == other.getAgentID(); }
+bool Agent::operator<(const Agent &other) const { return this->agentID < other.getAgentID(); }
 
 /// Agent Class Exception
 // Object Constructor

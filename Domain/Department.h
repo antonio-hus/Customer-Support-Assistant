@@ -6,45 +6,53 @@
 //////////////////////
 // C++ Libraries
 #include <string>
-#include <exception>
+#include <stdexcept>
 
 
 ////////////////////////
 /// CLASS DEFINITION ///
 ///////////////////////
 // Department Class
-class Department {
-private:
-    std::string departmentName;
-
-public:
-    explicit Department(std::string name="Unclassified");
-    [[nodiscard]] std::string getName() const;
-    Department& operator=(const Department& other);
-    bool operator<(const Department& other) const;
-    bool operator==(const Department& other) const;
-
+enum class Department {
+    Unclassified,
+    CustomerService,       // Customer Service
+    PersonalBanking,       // Personal Banking
+    BusinessBanking,        // Business Banking
+    InvestmentServices,    // Investment Services
+    LoansMortgages,    // Loans and Mortgages
+    RiskManagement,          // Risk Management
+    ITSupport,         // IT Support
+    HR,                // Human Resources
+    FinanceAccounting        // Finance and Accounting
 };
 
-// Department Class Exception
-class DepartmentException: public std::exception{
-private:
-    std::string exceptionMessage;
-
-public:
-    explicit DepartmentException(std::string message);
-    [[nodiscard]] const char* what() const noexcept override;
-
-};
-
-// Department Class Validator
-class DepartmentValidator {
-private:
-    static void validateName(const std::string& departmentName);
-
-public:
-    static void checkDepartment(Department& department);
-
-};
+/////////////////////
+/// CLASS METHODS ///
+/////////////////////
+// Converts Department enum to string
+inline std::string toString(Department dept) {
+    switch (dept) {
+        case Department::CustomerService:
+            return "Customer Service";
+        case Department::PersonalBanking:
+            return "Personal Banking";
+        case Department::BusinessBanking:
+            return "Business Banking";
+        case Department::InvestmentServices:
+            return "Investment Services";
+        case Department::LoansMortgages:
+            return "Loans and Mortgages";
+        case Department::RiskManagement:
+            return "Risk Management";
+        case Department::ITSupport:
+            return "IT Support";
+        case Department::HR:
+            return "Human Resources";
+        case Department::FinanceAccounting:
+            return "Finance and Accounting";
+        default:
+            return "Unknown Department";
+    }
+}
 
 #endif

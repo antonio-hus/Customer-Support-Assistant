@@ -11,35 +11,53 @@
 ////////////////////////////
 /// Inquiry Class
 // Object Constructor
-Inquiry::Inquiry(const User& user, const std::string& message, const std::string& inquiryID, const Department& departament, UrgencyLevel urgencyLevel,InquiryStatus inquiryStatus, std::tm timestamp)
-        : user(user), message(message), inquiryID(inquiryID), department(departament),
-          urgencyLevel(urgencyLevel), inquiryStatus(inquiryStatus), timestamp(timestamp) {
-    InquiryValidator::checkInquiry(*this);
+Inquiry::Inquiry(int id, const std::string &desc, const User& user)
+        : inquiryID(id), description(desc), urgencyLevel(UrgencyLevel::High), status(InquiryStatus::Pending), user(user), timestamp(get_current_date()) {
+    // By default, urgencyLevel is high, the inquiry is unclassified and in pending status. Timestamp is today
 }
 
 // Object Operator Overload
-bool Inquiry::operator==(const Inquiry& other) const { return this->inquiryID == other.getID(); }
+bool Inquiry::operator==(const Inquiry& other) const { return this->inquiryID == other.getInquiryID(); }
 
 // Object Attribute Getter
-User Inquiry::getUser() const { return this->user; }
-std::string Inquiry::getMessage() const { return this->message; }
-std::string Inquiry::getID() const { return this->inquiryID; }
-Department Inquiry::getDepartament() const { return this->department; }
-UrgencyLevel Inquiry::getUrgencyLevel() const { return this->urgencyLevel; }
-InquiryStatus Inquiry::getInquiryStatus() const { return this->inquiryStatus; }
+int Inquiry::getInquiryID() const { return inquiryID; }
+std::string Inquiry::getDescription() const { return description; }
+UrgencyLevel Inquiry::getUrgencyLevel() const { return urgencyLevel; }
+InquiryStatus Inquiry::getStatus() const { return status; }
+std::optional<Agent> Inquiry::getAssignedAgent() const { return assignedAgent; }
+std::optional<Department> Inquiry::getAssignedDepartment() const { return assignedDepartment; }
+std::optional<User> Inquiry::getUser() const { return user; }
+std::string Inquiry::getTimeStamp() const { return to_string(this->timestamp); }
 bool Inquiry::canBeDeleted() const {
     std::tm currentDate = get_current_date();
     std::tm inquiryDate = this->timestamp;
 
     // Inquiry can be deleted if it is completed and older than 7 days
-    return (this->inquiryStatus == InquiryStatus::Completed && difference(inquiryDate, currentDate) > 7);
+    return (this->status == InquiryStatus::Completed && difference(inquiryDate, currentDate) > 7);
 }
 
 // Object Attribute Setter
-void Inquiry::setID(const std::string& _inquiryID) { this->inquiryID = _inquiryID; }
-void Inquiry::setDepartment(const Department& _department) { this->department = _department; }
-void Inquiry::setUrgencyLevel(UrgencyLevel _urgencyLevel) { this->urgencyLevel = _urgencyLevel; }
-void Inquiry::setStatus(InquiryStatus _inquiryStatus) { this->inquiryStatus = _inquiryStatus; }
+void Inquiry::setUrgencyLevel(UrgencyLevel urgency) { urgencyLevel = urgency; }
+void Inquiry::setStatus(InquiryStatus status) { this->status = status; }
+void Inquiry::assignAgent(const Agent &agent) { assignedAgent = agent; }
+void Inquiry::assignDepartment(Department dept) { assignedDepartment = dept; }
+
+void Inquiry::process() {
+    if (status == InquiryStatus::Pending) {
+        status = InquiryStatus::Processing;
+    } else {
+        throw std::runtime_error("Inquiry cannot be processed from the current state.");
+    }
+}
+
+void Inquiry::complete() {
+    if (status == InquiryStatus::Processing) {
+        status = InquiryStatus::Completed;
+    } else {
+        throw std::runtime_error("Inquiry cannot be completed from the current state.");
+    }
+}
+
 
 /// Inquiry Class Exception
 // Object Constructor
@@ -57,11 +75,7 @@ void InquiryValidator::validateMessage(const std::string &message) {
     }
 }
 
-void InquiryValidator::validateTimestamp(const std::string &timestamp) {
-
-}
-
 // Object Methods Public
 void InquiryValidator::checkInquiry(Inquiry &inquiry) {
-    validateMessage(inquiry.getMessage());
+    validateMessage(inquiry.getDescription());
 }

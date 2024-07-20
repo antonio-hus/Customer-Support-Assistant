@@ -23,26 +23,18 @@
 #include "Gui/InquiriesView.h"
 
 
-/////////////////////////
-/// APP CONFIGURATION ///
-/////////////////////////
-// Bank Departments and number of Agents
-std::map<std::string, int> departments = {
-        {"Technical and Account Support", 1},
-        {"Billing and Payment Services", 1},
-        {"Loan and Investment Services", 1},
-        {"Customer and Compliance Services", 1}
-};
-
-
 ////////////////////
 /// APP HANDLER ///
 ///////////////////
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
 
+    /// APP CONFIGURATION ///
+    std::multimap<Department, Agent> departments;
+    Department department1 = Department("Techincal");
+
     // Starting Up the Bank Services - Repository & Controller
-    BankRepository* repository = new BankRepository();
+    BankRepository* repository = new BankRepository(departments);
     BankController controller = BankController(repository);
 
     // Starting Up Views

@@ -15,7 +15,7 @@
 // InquiryStatus Class
 enum class InquiryStatus {
     Pending,
-    InProgress,
+    Processing,
     Completed
 };
 
@@ -28,8 +28,8 @@ inline std::string toString(InquiryStatus status) {
     switch (status) {
         case InquiryStatus::Pending:
             return "Pending";
-        case InquiryStatus::InProgress:
-            return "InProgress";
+        case InquiryStatus::Processing:
+            return "Processing";
         case InquiryStatus::Completed:
             return "Completed";
         default:

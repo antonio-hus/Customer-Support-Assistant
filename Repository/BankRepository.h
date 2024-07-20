@@ -29,42 +29,43 @@ protected:
 
     // Processing Inquiries List
     // Map - Key , Value Pairs - Department & Department Processing Inquiries List
-    std::map<Department, std::multimap<Agent, Inquiry>> processingList;
-    // Department Processing Inquiries List
     // MultiMap - Key, Values Pairs - Agents & Processing Inquiries
-    std::multimap<Agent, Inquiry> departmentProcessingList;
+    std::map<Department, std::multimap<Agent, Inquiry>> processingList;
 
     // Completed Inquiries List
     std::vector<Inquiry> completedList;
 
-    // Departments List
-    std::vector<Department> departmentsList;
+    // Departments List - with agent count
+    std::map<Department, int> departmentsList;
+
+    // Agent List
+    std::vector<Agent> agentList;
 
 public:
+
+    /// Class Constructor
+    BankRepository(const std::map<Department, int>& departmentsList);
+
     /// GET Operations
     int getPendingSize();
     int getProcessingSize();
     int getProcessingByDepartmentSize(const Department &department);
+    int getProcessingByAgentSize(const Agent &agent);
     int getCompletedSize();
     int getDepartmentsSize();
     std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> getPending();
-    std::pair<std::multimap<Department, Inquiry>::const_iterator, std::multimap<Department, Inquiry>::const_iterator> getProcessing();
-    std::pair<std::multimap<Department, Inquiry>::const_iterator, std::multimap<Department, Inquiry>::const_iterator> getProcessingByDepartment(const Department& department);
+    std::pair<std::map<Department, std::multimap<Agent, Inquiry>>::const_iterator, std::map<Department, std::multimap<Agent, Inquiry>>::const_iterator> getProcessing();
+    std::pair<std::map<Department, std::multimap<Agent, Inquiry>>::const_iterator, std::map<Department, std::multimap<Agent, Inquiry>>::const_iterator> getProcessingByDepartment(const Department& department);
+    std::pair<std::multimap<Agent, Inquiry>::const_iterator, std::multimap<Agent, Inquiry>::const_iterator> getProcessingByAgent(const Agent& agent);
     std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> getCompleted();
-    std::pair<std::vector<Department>::const_iterator, std::vector<Department>::const_iterator> getDepartments();
+    std::pair<std::map<Department, int>::const_iterator, std::map<Department, int>::const_iterator> getDepartments();
 
     /// POST/PUT Operations
     // Inquiry Handlers
     void addInquiry(Inquiry& inquiry);
     void classifyInquiry(Inquiry& inquiry);
     void processInquiry(Inquiry& inquiry);
-
-    // Departament Handlers
-    // Adds a departament to the department list
-    void addDepartament(const Department& department);
-    // Removes a departament from the list and multimap
-    // All inquiries are set back to pending for reclassification
-    void removeDepartament(const Department& department);
+    void deleteOldInquiries();
 
 };
 

@@ -7,8 +7,10 @@
 // C++ Libraries
 #include <string>
 #include <exception>
+#include <optional>
 #include <ctime>
 // Project Libraries
+#include "Agent.h"
 #include "Department.h"
 #include "User.h"
 #include "InquiryStatus.h"
@@ -23,41 +25,44 @@
 class Inquiry {
 private:
 
-    // Provided Inquiry Information
+    int inquiryID;
     User user;
-    std::string message;
-
-    // Determined Inquiry Information
-    std::string inquiryID;
-    std::tm timestamp;
-    Department department;
+    std::string description;
     UrgencyLevel urgencyLevel;
-    InquiryStatus inquiryStatus;
+    InquiryStatus status;
+    std::optional<Agent> assignedAgent;
+    std::optional<Department> assignedDepartment;
+    std::tm timestamp;
 
 public:
 
-    // Inquiry Constructor
-    Inquiry(const User& user, const std::string& message, const std::string& inquiryID="-1",
-            const Department& departament=Department("Unclassified"), UrgencyLevel urgencyLevel=UrgencyLevel::Low,
-            InquiryStatus inquiryStatus=InquiryStatus::Pending, std::tm timestamp = get_current_date());
+    // Constructor
+    explicit Inquiry(int id, const std::string &desc, const User& user);
 
-    // Inquiry Operator Overload
+    // Operator Overload
     bool operator==(const Inquiry& other) const;
 
-    // Inquiry Attribute Getters
-    [[nodiscard]] User getUser() const;
-    [[nodiscard]] std::string getMessage() const;
-    [[nodiscard]] std::string getID() const;
-    [[nodiscard]] Department getDepartament() const;
+    // Getters
+    [[nodiscard]] int getInquiryID() const;
+    [[nodiscard]] std::string getDescription() const;
     [[nodiscard]] UrgencyLevel getUrgencyLevel() const;
-    [[nodiscard]] InquiryStatus getInquiryStatus() const;
+    [[nodiscard]] InquiryStatus getStatus() const;
+    [[nodiscard]] std::optional<Agent> getAssignedAgent() const;
+    [[nodiscard]] std::optional<Department> getAssignedDepartment() const;
+    [[nodiscard]] std::optional<User> getUser() const;
+    [[nodiscard]] std::string getTimeStamp() const;
     [[nodiscard]] bool canBeDeleted() const;
 
-    // Inquiry Attribute Setters
-    void setID(const std::string& inquiryID);
-    void setDepartment(const Department& department);
-    void setUrgencyLevel(UrgencyLevel urgencyLevel);
+    // Setters
+    void setUrgencyLevel(UrgencyLevel urgency);
     void setStatus(InquiryStatus status);
+    void assignAgent(const Agent &agent);
+    void assignDepartment(Department dept);
+
+    // Method to transition status
+    void process();
+    void complete();
+};
 
 };
 
@@ -76,7 +81,6 @@ public:
 class InquiryValidator {
 private:
     static void validateMessage(const std::string& message);
-    static void validateTimestamp(const std::string& timestamp);
 
 public:
     static void checkInquiry(Inquiry& inquiry);
