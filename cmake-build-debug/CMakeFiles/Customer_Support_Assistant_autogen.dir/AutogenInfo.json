@@ -316,6 +316,12 @@
 			"MU",
 			"3AKZUBQRRA/moc_ObserverPattern.cpp",
 			null
+		],
+		[
+			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/time.h",
+			"MU",
+			"3AKZUBQRRA/moc_time.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],

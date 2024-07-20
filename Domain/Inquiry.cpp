@@ -11,10 +11,9 @@
 ////////////////////////////
 /// Inquiry Class
 // Object Constructor
-Inquiry::Inquiry(const User& user, const std::string& message, const std::string& inquiryID, const Department& departament, UrgencyLevel urgencyLevel, InquiryStatus inquiryStatus, const std::string & timestamp):
-user{user}, message{message}, inquiryID{inquiryID}, department{departament}, urgencyLevel{urgencyLevel}, inquiryStatus{inquiryStatus}, timestamp{timestamp}
-{
-
+Inquiry::Inquiry(const User& user, const std::string& message, const std::string& inquiryID, const Department& departament, UrgencyLevel urgencyLevel,InquiryStatus inquiryStatus, std::tm timestamp)
+        : user(user), message(message), inquiryID(inquiryID), department(departament),
+          urgencyLevel(urgencyLevel), inquiryStatus(inquiryStatus), timestamp(timestamp) {
     InquiryValidator::checkInquiry(*this);
 }
 
@@ -28,6 +27,13 @@ std::string Inquiry::getID() const { return this->inquiryID; }
 Department Inquiry::getDepartament() const { return this->department; }
 UrgencyLevel Inquiry::getUrgencyLevel() const { return this->urgencyLevel; }
 InquiryStatus Inquiry::getInquiryStatus() const { return this->inquiryStatus; }
+bool Inquiry::canBeDeleted() const {
+    std::tm currentDate = get_current_date();
+    std::tm inquiryDate = this->timestamp;
+
+    // Inquiry can be deleted if it is completed and older than 7 days
+    return (this->inquiryStatus == InquiryStatus::Completed && difference(inquiryDate, currentDate) > 7);
+}
 
 // Object Attribute Setter
 void Inquiry::setID(const std::string& _inquiryID) { this->inquiryID = _inquiryID; }
@@ -49,6 +55,10 @@ void InquiryValidator::validateMessage(const std::string &message) {
     if (message.length() < 3) {
         throw InquiryException("Message must be at least 3 characters long");
     }
+}
+
+void InquiryValidator::validateTimestamp(const std::string &timestamp) {
+
 }
 
 // Object Methods Public

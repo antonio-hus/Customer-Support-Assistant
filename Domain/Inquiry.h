@@ -7,11 +7,13 @@
 // C++ Libraries
 #include <string>
 #include <exception>
+#include <ctime>
 // Project Libraries
 #include "Department.h"
 #include "User.h"
 #include "InquiryStatus.h"
 #include "UrgencyLevel.h"
+#include "../Utils/time.h"
 
 
 ////////////////////////
@@ -27,7 +29,7 @@ private:
 
     // Determined Inquiry Information
     std::string inquiryID;
-    std::string timestamp;
+    std::tm timestamp;
     Department department;
     UrgencyLevel urgencyLevel;
     InquiryStatus inquiryStatus;
@@ -37,7 +39,7 @@ public:
     // Inquiry Constructor
     Inquiry(const User& user, const std::string& message, const std::string& inquiryID="-1",
             const Department& departament=Department("Unclassified"), UrgencyLevel urgencyLevel=UrgencyLevel::Low,
-            InquiryStatus inquiryStatus=InquiryStatus::Pending, const std::string& timestamp="");
+            InquiryStatus inquiryStatus=InquiryStatus::Pending, std::tm timestamp = get_current_date());
 
     // Inquiry Operator Overload
     bool operator==(const Inquiry& other) const;
@@ -49,6 +51,7 @@ public:
     [[nodiscard]] Department getDepartament() const;
     [[nodiscard]] UrgencyLevel getUrgencyLevel() const;
     [[nodiscard]] InquiryStatus getInquiryStatus() const;
+    [[nodiscard]] bool canBeDeleted() const;
 
     // Inquiry Attribute Setters
     void setID(const std::string& inquiryID);
@@ -73,6 +76,7 @@ public:
 class InquiryValidator {
 private:
     static void validateMessage(const std::string& message);
+    static void validateTimestamp(const std::string& timestamp);
 
 public:
     static void checkInquiry(Inquiry& inquiry);

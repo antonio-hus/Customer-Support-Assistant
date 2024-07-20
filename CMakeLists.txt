@@ -52,6 +52,7 @@ add_executable(
         Utils/ObserverPattern.h
         Utils/CustomTables.h
         Utils/CustomTables.cpp
+        Utils/time.h
 )
 target_link_libraries(Customer_Support_Assistant
         Qt::Core
