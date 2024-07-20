@@ -27,6 +27,16 @@ public:
     bool operator==(const Agent& other) const;
 };
 
+// Agent Class Specialized Methods
+// Hashing
+namespace std {
+    template <>
+    struct hash<Agent> {
+        std::size_t operator()(const Agent& agent) const {
+            return std::hash<int>()(agent.getAgentID());
+        }
+    };
+}
 
 // Agent Class Exception
 class AgentException: public std::exception{

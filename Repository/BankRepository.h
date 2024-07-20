@@ -7,7 +7,7 @@
 // C++ Libraries
 #include <string>
 #include <vector>
-#include <map>
+#include <unordered_map>
 // Project Libraries
 #include "../Domain/User.h"
 #include "../Domain/Agent.h"
@@ -28,20 +28,20 @@ protected:
     std::vector<Inquiry> pendingList;
 
     // Processing Inquiries List
-    // Map - Key , Value Pairs - Department & Department Processing Inquiries List
-    // MultiMap - Key, Values Pairs - Agents & Processing Inquiries
-    std::map<Department, std::multimap<Agent, Inquiry>> processingList;
+    // Unordered Map - Key, Value Pairs - Department & Department Processing Inquiries List
+    // Unordered Multimap - Key, Values Pairs - Agents & Processing Inquiries
+    std::unordered_map<Department, std::unordered_multimap<Agent, Inquiry>> processingList;
 
     // Completed Inquiries List
     std::vector<Inquiry> completedList;
 
-    // Departments MultiMap - Key: Department, Values: Agents
-    std::multimap<Department, Agent> departmentsMap;
+    // Departments Unordered Multimap - Key: Department, Values: Agents
+    std::unordered_multimap<Department, Agent> departmentsMap;
 
 public:
 
     /// Class Constructor
-    BankRepository(const std::map<Department, int>& departmentsMap);
+    BankRepository(const std::unordered_map<Department, int>& departmentsMap);
 
     /// GET Operations
     unsigned long long getPendingSize();
@@ -50,9 +50,9 @@ public:
     unsigned long long getProcessingByAgentSize(const Agent &agent);
     unsigned long long getCompletedSize();
     std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> getPending();
-    std::pair<std::map<Department, std::multimap<Agent, Inquiry>>::const_iterator, std::map<Department, std::multimap<Agent, Inquiry>>::const_iterator> getProcessing();
-    std::pair<std::map<Department, std::multimap<Agent, Inquiry>>::const_iterator, std::map<Department, std::multimap<Agent, Inquiry>>::const_iterator> getProcessingByDepartment(const Department& department);
-    std::pair<std::multimap<Agent, Inquiry>::const_iterator, std::multimap<Agent, Inquiry>::const_iterator> getProcessingByAgent(const Agent& agent);
+    std::pair<std::unordered_map<Department, std::unordered_multimap<Agent, Inquiry>>::const_iterator, std::unordered_map<Department, std::unordered_multimap<Agent, Inquiry>>::const_iterator> getProcessing();
+    std::pair<std::unordered_multimap<Agent, Inquiry>::const_iterator, std::unordered_multimap<Agent, Inquiry>::const_iterator> getProcessingByDepartment(const Department& department);
+    std::pair<std::unordered_multimap<Agent, Inquiry>::const_iterator, std::unordered_multimap<Agent, Inquiry>::const_iterator> getProcessingByAgent(const Agent& agent);
     std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> getCompleted();
 
     /// POST/PUT Operations
@@ -72,6 +72,5 @@ class CloudBankRepository: public BankRepository {
 public:
 
 };
-
 
 #endif

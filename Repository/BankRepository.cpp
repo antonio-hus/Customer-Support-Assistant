@@ -12,23 +12,17 @@
 /// CLASS IMPLEMENTATION ///
 ////////////////////////////
 /// BankRepository Constructor
-BankRepository::BankRepository(const std::map<Department, int>& departmentsList) {
+BankRepository::BankRepository(const std::unordered_map<Department, int>& departmentsMap) {
 
     // Iterate Bank Configuration
-    auto it = departmentsList.begin();
-    while(it != departmentsList.end()){
-
-        // Get department data
-        Department department = it->first;
-        int agentCount = it->second;
+    int counter = 0;
+    for (const auto& [department, agentCount] : departmentsMap) {
 
         // Initialize Agents
-        for(int i=1; i<=agentCount; ++i){
-            this->departmentsMap.insert(std::make_pair(department, Agent(i, department)));
+        for (int i = 1; i <= agentCount; ++i) {
+            counter ++;
+            this->departmentsMap.emplace(department, Agent(counter, department));
         }
-
-        // Get the next element
-        ++it;
     }
 }
 
@@ -48,8 +42,15 @@ unsigned long long BankRepository::getProcessingByDepartmentSize(const Departmen
 }
 
 unsigned long long BankRepository::getProcessingByAgentSize(const Agent &agent) {
-    auto deptRange = this->processingList.find(agent.getDepartment());
-    auto agentRange = deptRange->second.equal_range(agent);
+
+    // Get Department Range
+    auto deptIt = this->processingList.find(agent.getDepartment());
+    if (deptIt == this->processingList.end()) {
+        return 0;
+    }
+
+    // Get Agent range
+    auto agentRange = deptIt->second.equal_range(agent);
     return std::distance(agentRange.first, agentRange.second);
 }
 
@@ -58,45 +59,64 @@ unsigned long long BankRepository::getCompletedSize() {
 }
 
 // Get Constant Iterators over the lists
-std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator>
-BankRepository::getPending() {
+std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> BankRepository::getPending() {
     return { this->pendingList.begin(), this->pendingList.end() };
 }
 
-std::pair<std::map<Department, std::multimap<Agent, Inquiry>>::const_iterator, std::map<Department, std::multimap<Agent, Inquiry>>::const_iterator>
-BankRepository::getProcessing() {
+std::pair<std::unordered_map<Department, std::unordered_multimap<Agent, Inquiry>>::const_iterator, std::unordered_map<Department, std::unordered_multimap<Agent, Inquiry>>::const_iterator> BankRepository::getProcessing() {
     return { this->processingList.begin(), this->processingList.end() };
 }
 
-std::pair<std::map<Department, std::multimap<Agent, Inquiry>>::const_iterator, std::map<Department, std::multimap<Agent, Inquiry>>::const_iterator>
-BankRepository::getProcessingByDepartment(const Department &department) {
-    return this->processingList.equal_range(department);
+std::pair<std::unordered_multimap<Agent, Inquiry>::const_iterator, std::unordered_multimap<Agent, Inquiry>::const_iterator>
+BankRepository::getProcessingByDepartment(const Department& department) {
+
+    // Get department Range
+    auto deptIt = this->processingList.find(department);
+
+    // If department does not exist - return empty range
+    if (deptIt != this->processingList.end()) {
+        return { {}, {} };
+    }
+
+    // If department exists - return department range
+    auto& deptRange = deptIt->second;
+    return { deptRange.begin(), deptRange.end() };
 }
 
-std::pair<std::multimap<Agent, Inquiry>::const_iterator, std::multimap<Agent, Inquiry>::const_iterator>
-BankRepository::getProcessingByAgent(const Agent &agent) {
-    auto deptRange = this->processingList.find(agent.getDepartment());
-    auto agentRange = deptRange->second.equal_range(agent);
-    return agentRange;
+std::pair<std::unordered_multimap<Agent, Inquiry>::const_iterator, std::unordered_multimap<Agent, Inquiry>::const_iterator>
+BankRepository::getProcessingByAgent(const Agent& agent) {
+
+    // Get department range
+    auto deptIt = this->processingList.find(agent.getDepartment());
+
+    // If department does not exist - return empty range
+    if (deptIt != this->processingList.end()) {
+        return { {}, {} };
+    }
+
+    // If department exists - return agent range
+    return deptIt->second.equal_range(agent);
 }
 
-std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator>
-BankRepository::getCompleted() {
+std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> BankRepository::getCompleted() {
     return { this->completedList.begin(), this->completedList.end() };
 }
 
 /// BankRepository Class - POST/PUT Operations
 // Inquiry Handlers
-void BankRepository::addInquiry(Inquiry &inquiry) {
+void BankRepository::addInquiry(Inquiry& inquiry) {
     inquiry.setStatus(InquiryStatus::Pending);
     this->pendingList.push_back(inquiry);
     this->notify();
 }
 
-void BankRepository::classifyInquiry(Inquiry &inquiry) {
+void BankRepository::classifyInquiry(Inquiry& inquiry) {
 
     // Remove from pendingList
-    this->pendingList.erase(std::find(this->pendingList.begin(), this->pendingList.end(), inquiry));
+    auto it = std::find(this->pendingList.begin(), this->pendingList.end(), inquiry);
+    if (it != this->pendingList.end()) {
+        this->pendingList.erase(it);
+    }
 
     // Set the Inquiry Status
     inquiry.process();
@@ -110,22 +130,22 @@ void BankRepository::classifyInquiry(Inquiry &inquiry) {
 
     // Set the Agent
     // Assign Inquiry to Agent with the least inquiries
-    auto& deptRange = this->processingList.find(DEPARTMENT)->second;
+    auto& deptRange = this->processingList[DEPARTMENT];
     auto agents = this->departmentsMap.equal_range(DEPARTMENT);
 
     unsigned long long minInquiries = std::numeric_limits<unsigned long long>::max();
     Agent minAgent = Agent(-1, Department::Unclassified);
-    for(auto& it = agents.first; it != agents.second; ++it){
-        unsigned long long count = deptRange.count(it->second);
-        if (count < minInquiries){
+    for (auto itr = agents.first; itr != agents.second; ++itr) {
+        unsigned long long count = deptRange.count(itr->second);
+        if (count < minInquiries) {
             minInquiries = count;
-            minAgent = it->second;
+            minAgent = itr->second;
         }
     }
     inquiry.assignAgent(minAgent);
-    deptRange.insert(std::make_pair(minAgent, inquiry));
+    deptRange.emplace(minAgent, inquiry);
 
-    // Add in the processingList to the correct department
+    // Notify about the change
     this->notify();
 }
 
@@ -136,8 +156,7 @@ void BankRepository::processInquiry(Inquiry &inquiry) {
     if (deptIt == this->processingList.end()) {
         throw std::invalid_argument("Department not found in processing list.");
     }
-
-    auto& deptRange = deptIt->second; // This is a multimap<Agent, Inquiry>
+    auto& deptRange = deptIt->second;
 
     // Find the range of inquiries for the assigned agent
     auto agentRange = deptRange.equal_range(inquiry.getAssignedAgent());
@@ -146,7 +165,8 @@ void BankRepository::processInquiry(Inquiry &inquiry) {
     // Iterate over the range to find the specific inquiry to remove
     while (itToRemove != agentRange.second) {
         if (&itToRemove->second == &inquiry) {
-            // Remove the inquiry from the multimap
+
+            // Remove the inquiry from the unordered_multimap
             deptRange.erase(itToRemove);
             break;
         }

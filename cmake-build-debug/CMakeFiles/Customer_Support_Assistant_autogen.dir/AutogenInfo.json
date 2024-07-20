@@ -240,12 +240,6 @@
 			null
 		],
 		[
-			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Department.h",
-			"MU",
-			"JE6WBJKE3F/moc_Department.cpp",
-			null
-		],
-		[
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Inquiry.h",
 			"MU",
 			"JE6WBJKE3F/moc_Inquiry.cpp",
@@ -407,11 +401,6 @@
 		],
 		[
 			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Agent.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Department.cpp",
 			"MU",
 			null
 		],

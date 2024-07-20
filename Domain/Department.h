@@ -7,6 +7,7 @@
 // C++ Libraries
 #include <string>
 #include <stdexcept>
+#include <functional>
 
 
 ////////////////////////
