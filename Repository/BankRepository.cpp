@@ -14,6 +14,9 @@
 /// BankRepository Constructor
 BankRepository::BankRepository(const std::unordered_map<Department, int>& departmentsMap) {
 
+    // Initializing static variable
+    BankRepository::noInquiries = 0;
+
     // Iterate Bank Configuration
     int counter = 0;
     for (const auto& [department, agentCount] : departmentsMap) {

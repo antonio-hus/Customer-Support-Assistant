@@ -40,6 +40,10 @@ protected:
 
 public:
 
+    /// Class Static Variables
+    // Number of inquiry instances:
+    static unsigned long long noInquiries;
+
     /// Class Constructor
     BankRepository(const std::unordered_map<Department, int>& departmentsMap);
 

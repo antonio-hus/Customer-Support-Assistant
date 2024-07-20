@@ -11,16 +11,20 @@
 ////////////////////////////
 /// Inquiry Class
 // Object Constructor
-Inquiry::Inquiry(int id, const std::string &desc, const User& user)
-        : inquiryID(id), description(desc), urgencyLevel(UrgencyLevel::High), status(InquiryStatus::Pending), user(user), timestamp(get_current_date()) {
+Inquiry::Inquiry(unsigned long long id, const std::string &desc, const User &user, Agent assignedAgent)
+        : inquiryID(id), description(desc), urgencyLevel(UrgencyLevel::High), status(InquiryStatus::Pending), user(user), timestamp(get_current_date()),
+          assignedAgent(assignedAgent) {
     // By default, urgencyLevel is high, the inquiry is unclassified and in pending status. Timestamp is today
+    this->assignedDepartment = Department::Unclassified;
+    this->assignedAgent = Agent(-1, Department::Unclassified);
+    InquiryValidator::checkInquiry(*this);
 }
 
 // Object Operator Overload
 bool Inquiry::operator==(const Inquiry& other) const { return this->inquiryID == other.getInquiryID(); }
 
 // Object Attribute Getter
-int Inquiry::getInquiryID() const { return inquiryID; }
+unsigned long long Inquiry::getInquiryID() const { return inquiryID; }
 std::string Inquiry::getDescription() const { return description; }
 UrgencyLevel Inquiry::getUrgencyLevel() const { return urgencyLevel; }
 InquiryStatus Inquiry::getStatus() const { return status; }

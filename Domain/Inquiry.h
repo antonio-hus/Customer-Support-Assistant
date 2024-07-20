@@ -25,25 +25,25 @@
 class Inquiry {
 private:
 
-    int inquiryID;
+    unsigned long long inquiryID;
     User user;
     std::string description;
     UrgencyLevel urgencyLevel;
     InquiryStatus status;
-    std::optional<Agent> assignedAgent;
-    std::optional<Department> assignedDepartment;
+    Agent assignedAgent;
+    Department assignedDepartment;
     std::tm timestamp;
 
 public:
 
     // Constructor
-    explicit Inquiry(int id, const std::string &desc, const User& user);
+    explicit Inquiry(unsigned long long id, const std::string &desc, const User &user, Agent assignedAgent=Agent(-1, Department::Unclassified));
 
     // Operator Overload
     bool operator==(const Inquiry& other) const;
 
     // Getters
-    [[nodiscard]] int getInquiryID() const;
+    [[nodiscard]] unsigned long long getInquiryID() const;
     [[nodiscard]] std::string getDescription() const;
     [[nodiscard]] UrgencyLevel getUrgencyLevel() const;
     [[nodiscard]] InquiryStatus getStatus() const;

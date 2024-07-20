@@ -7,7 +7,7 @@
 // C++ Libraries
 #include <string>
 #include <vector>
-#include <map>
+#include <unordered_map>
 #include <exception>
 // Project Libraries
 #include "../Domain/User.h"
@@ -29,41 +29,30 @@ private:
     BankRepository* repository;
 
     // Runtime Data
-    std::vector<User*> users;
-    std::vector<Department*> departments;
-    std::vector<Inquiry*> inquiries;
+    std::vector<User> users;
+    std::vector<Inquiry> inquiries;
 
 public:
 
     /// Constructor
     explicit BankController(BankRepository* repository);
-    ~BankController();
 
     /// Object Builder Methods
-    User* createUser(const std::string& username);
-    Inquiry* createInquiry(const std::string& username, const std::string& message);
-    Department* createDepartment(const std::string& departamentName="Unclassified");
+    Inquiry createInquiry(const std::string& username, const std::string& firstname, const std::string& lastname, const std::string& email, const std::string& phonenumber, const std::string& message);
 
     /// GET Operations
-    std::vector<Inquiry*> getInquiries();
+    std::vector<Inquiry> getInquiries();
     std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> getPending();
-    std::pair<std::multimap<Department, Inquiry>::const_iterator, std::multimap<Department, Inquiry>::const_iterator> getProcessing();
-    std::pair<std::multimap<Department, Inquiry>::const_iterator, std::multimap<Department, Inquiry>::const_iterator> getProcessingByDepartment(const Department& department);
+    std::pair<std::unordered_map<Department, std::unordered_multimap<Agent, Inquiry>>::const_iterator, std::unordered_map<Department, std::unordered_multimap<Agent, Inquiry>>::const_iterator> getProcessing();
+    std::pair<std::unordered_multimap<Agent, Inquiry>::const_iterator, std::unordered_multimap<Agent, Inquiry>::const_iterator> getProcessingByDepartment(const Department& department);
+    std::pair<std::unordered_multimap<Agent, Inquiry>::const_iterator, std::unordered_multimap<Agent, Inquiry>::const_iterator> getProcessingByAgent(const Agent& agent);
     std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> getCompleted();
-    std::pair<std::vector<Department>::const_iterator, std::vector<Department>::const_iterator> getDepartments();
 
     /// POST/PUT Operations
     // Inquiry Handlers
     void addInquiry(Inquiry& inquiry);
     void classifyInquiry(Inquiry& inquiry);
     void processInquiry(Inquiry& inquiry);
-
-    // Departament Handlers
-    // Adds a departament to the department list
-    void addDepartament(const Department& department);
-    // Removes a departament from the list and multimap
-    // All inquiries are set back to pending for reclassification
-    void removeDepartament(const Department& department);
 };
 
 
