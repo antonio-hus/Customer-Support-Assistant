@@ -245,6 +245,7 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QMap \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20type_traits.h \
@@ -362,6 +363,7 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Qt/6.7.0/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qyieldcpu.h \
+  C:/Qt/6.7.0/mingw_64/include/QtGui/QPainter \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qbrush.h \
@@ -374,13 +376,16 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Qt/6.7.0/mingw_64/include/QtGui/qimage.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qpaintdevice.h \
+  C:/Qt/6.7.0/mingw_64/include/QtGui/qpainter.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qpalette.h \
+  C:/Qt/6.7.0/mingw_64/include/QtGui/qpen.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qpixmap.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qpolygon.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qregion.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qrgb.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qrgba64.h \
+  C:/Qt/6.7.0/mingw_64/include/QtGui/qtextoption.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qtguiglobal.h \
@@ -394,10 +399,12 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qwidget.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Controller/BankController.h \
+  C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Agent.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Department.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Inquiry.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/InquiryStatus.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/UrgencyLevel.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/User.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Repository/BankRepository.h \
-  C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/ObserverPattern.h
+  C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/ObserverPattern.h \
+  C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/time.h

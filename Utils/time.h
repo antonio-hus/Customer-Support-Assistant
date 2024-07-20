@@ -16,7 +16,7 @@
 /// METHOD DEFINITION ///
 ////////////////////////
 // Get the current date
-std::tm get_current_date() {
+inline std::tm get_current_date() {
     // Get current time
     std::time_t now = std::time(nullptr);
 
@@ -26,7 +26,7 @@ std::tm get_current_date() {
 }
 
 // Compute difference of the two dates
-int difference(const std::tm& timestamp1, const std::tm& timestamp2) {
+inline int difference(const std::tm& timestamp1, const std::tm& timestamp2) {
     // Convert std::tm to std::time_t
     std::time_t time1 = std::mktime(const_cast<std::tm*>(&timestamp1));
     std::time_t time2 = std::mktime(const_cast<std::tm*>(&timestamp2));
@@ -40,7 +40,7 @@ int difference(const std::tm& timestamp1, const std::tm& timestamp2) {
 }
 
 // Get the string format of the current date
-std::string to_string(const std::tm& timestamp) {
+inline std::string to_string(const std::tm& timestamp) {
 
     // Convert to string DD.MM.YYYY format
     std::ostringstream oss;

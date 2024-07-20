@@ -281,6 +281,7 @@ Customer_Support_Assistant_autogen/timestamp: \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QMap \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20type_traits.h \
@@ -398,6 +399,7 @@ Customer_Support_Assistant_autogen/timestamp: \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qyieldcpu.h \
+  C:/Qt/6.7.0/mingw_64/include/QtGui/QPainter \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qbrush.h \
@@ -410,13 +412,16 @@ Customer_Support_Assistant_autogen/timestamp: \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qimage.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qpaintdevice.h \
+  C:/Qt/6.7.0/mingw_64/include/QtGui/qpainter.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qpalette.h \
+  C:/Qt/6.7.0/mingw_64/include/QtGui/qpen.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qpixmap.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qpolygon.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qregion.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qrgb.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qrgba64.h \
+  C:/Qt/6.7.0/mingw_64/include/QtGui/qtextoption.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qtguiglobal.h \
@@ -569,7 +574,8 @@ Customer_Support_Assistant_autogen/timestamp: \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Controller/BankController.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/AIModel.cpp \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/AIModel.h \
-  C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Department.cpp \
+  C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Agent.cpp \
+  C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Agent.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Department.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Inquiry.cpp \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Inquiry.h \
@@ -597,6 +603,7 @@ Customer_Support_Assistant_autogen/timestamp: \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/CustomTables.cpp \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/CustomTables.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/ObserverPattern.h \
+  C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/time.h \
   CMakeFiles/3.27.8/CMakeCCompiler.cmake \
   CMakeFiles/3.27.8/CMakeCXXCompiler.cmake \
   CMakeFiles/3.27.8/CMakeRCCompiler.cmake \

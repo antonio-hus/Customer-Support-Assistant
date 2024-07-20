@@ -394,10 +394,12 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qwidget.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Controller/BankController.h \
+  C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Agent.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Department.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Inquiry.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/InquiryStatus.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/UrgencyLevel.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/User.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Repository/BankRepository.h \
-  C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/ObserverPattern.h
+  C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/ObserverPattern.h \
+  C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/time.h

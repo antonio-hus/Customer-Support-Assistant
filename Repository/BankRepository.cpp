@@ -8,14 +8,18 @@
 // Project Libraries
 #include "BankRepository.h"
 
+
+////////////////////////
+/// STATIC VARIABLES ///
+////////////////////////
+unsigned long long BankRepository::noInquiries = 0;
+
+
 ////////////////////////////
 /// CLASS IMPLEMENTATION ///
 ////////////////////////////
 /// BankRepository Constructor
 BankRepository::BankRepository(const std::unordered_map<Department, int>& departmentsMap) {
-
-    // Initializing static variable
-    BankRepository::noInquiries = 0;
 
     // Iterate Bank Configuration
     int counter = 0;

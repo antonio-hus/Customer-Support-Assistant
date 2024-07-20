@@ -24,7 +24,8 @@ QT_END_NAMESPACE
 ////////////////////////
 /// CLASS DEFINITION ///
 ////////////////////////
-class StatisticsView : public QWidget, public Observer { Q_OBJECT
+class StatisticsView : public QWidget, public Observer {
+Q_OBJECT
 private:
     BankController* controller;
     Ui::StatisticsView *ui;

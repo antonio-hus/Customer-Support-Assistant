@@ -45,7 +45,8 @@ public:
     static unsigned long long noInquiries;
 
     /// Class Constructor
-    BankRepository(const std::unordered_map<Department, int>& departmentsMap);
+    explicit BankRepository(const std::unordered_map<Department, int>& departmentsMap);
+    virtual ~BankRepository() = default;
 
     /// GET Operations
     unsigned long long getPendingSize();

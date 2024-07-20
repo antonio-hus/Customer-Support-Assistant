@@ -22,7 +22,8 @@ QT_END_NAMESPACE
 ////////////////////////
 /// CLASS DEFINITION ///
 ////////////////////////
-class InquiriesView : public QWidget, public Observer { Q_OBJECT
+class InquiriesView : public QWidget, public Observer {
+Q_OBJECT
 private:
     BankController* controller;
     Ui::InquiriesView *ui;

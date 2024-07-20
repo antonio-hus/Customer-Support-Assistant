@@ -30,11 +30,11 @@ void StatisticsView::notify() {
 // Data Processing for Graph Visualization
 void StatisticsView::processInquiries() {
     this->departmentCounts.clear();
-    std::vector<Inquiry*> inquiries = controller->getInquiries();
+    std::vector<Inquiry> inquiries = controller->getInquiries();
     for (const auto& inquiry : inquiries) {
 
         // Insert in the Statistics Map
-        QString department = QString::fromStdString(inquiry->getDepartament().getName());
+        QString department = QString::fromStdString(toString(inquiry.getAssignedDepartment()));
         if (departmentCounts.contains(department)) {
             departmentCounts[department]++;
         } else {
