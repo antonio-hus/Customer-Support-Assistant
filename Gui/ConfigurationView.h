@@ -39,7 +39,7 @@ private:
     Ui::ConfigurationView *ui;
 
 public:
-    explicit ConfigurationView(BankRepository* bankRepository, BankController* controller, QWidget *parent = nullptr);
+    explicit ConfigurationView(QWidget *parent = nullptr);
     ~ConfigurationView() override;
 
 };

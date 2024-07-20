@@ -387,7 +387,11 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Qt/6.7.0/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/QMessageBox \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/QWidget \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/qdialog.h \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/qmessagebox.h \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \

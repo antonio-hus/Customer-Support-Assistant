@@ -6,8 +6,10 @@
 //////////////////////
 // C++ Libraries
 // Qt Libraries
+#include <QMessageBox>
 #include <QWidget>
 // Project Libraries
+#include "../Domain/Inquiry.h"
 #include "../Controller/BankController.h"
 #include "../Utils/ObserverPattern.h"
 
@@ -23,7 +25,7 @@ QT_END_NAMESPACE
 ////////////////////////
 /// CLASS DEFINITION ///
 ////////////////////////
-class ClientView : public QWidget, public Observer {
+class ClientView : public QWidget {
 Q_OBJECT
 private:
     BankController* controller;
@@ -31,7 +33,6 @@ private:
 
 public:
     explicit ClientView(BankController* controller, QWidget *parent = nullptr);
-    void notify() override {};
     ~ClientView() override;
 };
 

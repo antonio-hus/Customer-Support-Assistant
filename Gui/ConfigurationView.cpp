@@ -10,8 +10,8 @@
 /// CLASS IMPLEMENTATION ///
 ////////////////////////////
 // Class Constructor
-ConfigurationView::ConfigurationView(BankRepository* repository, BankController* controller, QWidget *parent) :
-        repository{repository}, controller{controller}, QWidget(parent), ui(new Ui::ConfigurationView) {
+ConfigurationView::ConfigurationView(QWidget *parent) :
+       QWidget(parent), ui(new Ui::ConfigurationView) {
     ui->setupUi(this);
 
     // Handle Configuration Submission
@@ -50,7 +50,12 @@ ConfigurationView::ConfigurationView(BankRepository* repository, BankController*
         this->hide();
 
         // Starting Up Views
-        // Client Controller View
+        // Client View
+        auto* clientView =  new ClientView(controller);
+        allocatedViews.push_back(clientView);
+        clientView->show();
+
+        // Controller View
         auto* controllerView =  new ControllerView(controller);
         allocatedViews.push_back(controllerView);
         controllerView->show();
@@ -76,4 +81,6 @@ ConfigurationView::~ConfigurationView() {
     for(auto screen:this->allocatedViews){
         delete screen;
     }
+    delete repository;
+    delete controller;
 }

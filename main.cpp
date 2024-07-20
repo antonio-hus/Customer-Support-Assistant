@@ -20,13 +20,6 @@
 #include "Gui/ConfigurationView.h"
 
 
-///////////////////
-/// APP GLOBALS ///
-///////////////////
-BankRepository* repository;
-BankController* controller;
-
-
 ////////////////////
 /// APP HANDLER ///
 ///////////////////
@@ -34,15 +27,11 @@ int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
 
     // Configuration View
-    auto* configurationView = new ConfigurationView(repository, controller);
+    auto* configurationView = new ConfigurationView();
     configurationView->show();
 
     // Execute the application
     int result = QApplication::exec();
-
-    // Clean up & close Bank Services
-    delete repository;
-    delete controller;
 
     // Return execution result
     return result;
