@@ -3,7 +3,7 @@
 //////////////////////
 // C++ Libraries
 #include <vector>
-#include <map>
+#include <unordered_map>
 #include <string>
 // Qt Libraries
 #include <QApplication>
@@ -23,18 +23,31 @@
 #include "Gui/InquiriesView.h"
 
 
+///////////////////
+/// APP CONFIGS ///
+///////////////////
+// Set up the number of departments and agents
+std::unordered_map<Department, int> departmentsMap = {
+        { Department::CustomerService, 1 },
+        { Department::PersonalBanking, 1 },
+        { Department::BusinessBanking, 1 },
+        { Department::InvestmentServices, 1 },
+        { Department::LoansMortgages, 1 },
+        { Department::RiskManagement, 1 },
+        { Department::ITSupport, 1 },
+        { Department::HR, 1 },
+        { Department::FinanceAccounting, 1 },
+};
+
+
 ////////////////////
 /// APP HANDLER ///
 ///////////////////
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
 
-    /// APP CONFIGURATION ///
-    std::multimap<Department, Agent> departments;
-    Department department1 = Department("Techincal");
-
     // Starting Up the Bank Services - Repository & Controller
-    BankRepository* repository = new BankRepository(departments);
+    BankRepository* repository = new BankRepository(departmentsMap);
     BankController controller = BankController(repository);
 
     // Starting Up Views
@@ -46,11 +59,11 @@ int main(int argc, char *argv[]) {
     // Keeping track of allocated views
     std::vector<DepartmentView*> departmentViews;
     // Looping over all departments
-    for (const auto& pair : departments) {
+    for (const auto& pair : departmentsMap) {
 
         // Opening as many agents as specified in config
         for (int i = 1; i <= pair.second; ++i) {
-            auto* departmentView = new DepartmentView(&controller, pair.first + " - agent " + std::to_string(i));
+            auto* departmentView = new DepartmentView(&controller, toString(pair.first) + " - agent " + std::to_string(i));
             departmentViews.push_back(departmentView);
             departmentView->show();
         }
