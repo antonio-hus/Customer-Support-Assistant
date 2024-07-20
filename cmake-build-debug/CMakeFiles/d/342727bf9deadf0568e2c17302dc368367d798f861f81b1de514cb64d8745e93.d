@@ -594,6 +594,8 @@ Customer_Support_Assistant_autogen/timestamp: \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/StatisticsView.ui \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Repository/BankRepository.cpp \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Repository/BankRepository.h \
+  C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/CustomTables.cpp \
+  C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/CustomTables.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/ObserverPattern.h \
   CMakeFiles/3.27.8/CMakeCCompiler.cmake \
   CMakeFiles/3.27.8/CMakeCXXCompiler.cmake \

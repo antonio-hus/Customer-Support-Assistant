@@ -27,6 +27,7 @@ private:
 
     // Determined Inquiry Information
     std::string inquiryID;
+    std::string timestamp;
     Department department;
     UrgencyLevel urgencyLevel;
     InquiryStatus inquiryStatus;
@@ -36,7 +37,7 @@ public:
     // Inquiry Constructor
     Inquiry(const User& user, const std::string& message, const std::string& inquiryID="-1",
             const Department& departament=Department("Unclassified"), UrgencyLevel urgencyLevel=UrgencyLevel::Low,
-            InquiryStatus inquiryStatus=InquiryStatus::Pending);
+            InquiryStatus inquiryStatus=InquiryStatus::Pending, const std::string& timestamp="");
 
     // Inquiry Operator Overload
     bool operator==(const Inquiry& other) const;

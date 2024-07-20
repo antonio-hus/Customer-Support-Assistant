@@ -2,5 +2,3 @@
 #include "EHIEGSSRCT/moc_ClientView.cpp"
 #include "EHIEGSSRCT/moc_ControllerView.cpp"
 #include "EHIEGSSRCT/moc_DepartmentView.cpp"
-#include "EHIEGSSRCT/moc_InquiriesView.cpp"
-#include "EHIEGSSRCT/moc_StatisticsView.cpp"

@@ -198,6 +198,9 @@ CMAKE_OBJCOPY:FILEPATH=C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/bin/o
 //Path to a program.
 CMAKE_OBJDUMP:FILEPATH=C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/bin/objdump.exe
 
+//Vcpkg toolchain file
+CMAKE_PREFIX_PATH:STRING=C:/Qt/6.7.0/mingw_64/lib/cmake;CMAKE_TOOLCHAIN_FILE;C:/Users/anton/vcpkg/scripts/buildsystems/vcpkg.cmake
+
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=
 
@@ -332,6 +335,9 @@ Qt6ZlibPrivate_DIR:PATH=C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6ZlibPrivate
 
 //The directory containing a CMake configuration file for Qt6.
 Qt6_DIR:PATH=C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6
+
+//The directory containing a CMake configuration file for Qt6date.
+Qt6date_DIR:PATH=Qt6date_DIR-NOTFOUND
 
 //Path to a program.
 Vulkan_GLSLANG_VALIDATOR_EXECUTABLE:FILEPATH=Vulkan_GLSLANG_VALIDATOR_EXECUTABLE-NOTFOUND

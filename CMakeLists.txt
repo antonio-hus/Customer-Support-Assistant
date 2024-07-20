@@ -8,7 +8,8 @@ set(CMAKE_AUTOUIC ON)
 
 set(CMAKE_PREFIX_PATH "C:/Qt/6.7.0/mingw_64/lib/cmake")
 
-find_package(Qt6 COMPONENTS
+find_package(
+        Qt6 COMPONENTS
         Core
         Gui
         Widgets
@@ -19,6 +20,8 @@ add_executable(
         main.cpp
         Domain/User.h
         Domain/User.cpp
+        Domain/Agent.h
+        Domain/Agent.cpp
         Domain/Department.h
         Domain/Department.cpp
         Domain/Inquiry.h

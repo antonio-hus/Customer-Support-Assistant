@@ -61,11 +61,11 @@ QVariant PendingTable::data(const QModelIndex &index, int role) const {
 
 // Processing Inquiries Table Model Implementation
 int ProcessingTable::rowCount(const QModelIndex &parent) const {
-
+    return this->repository->getProcessingSize();
 }
 
 int ProcessingTable::columnCount(const QModelIndex &parent) const {
-
+    return 6;
 }
 
 QVariant ProcessingTable::data(const QModelIndex &index, int role) const {
@@ -74,11 +74,11 @@ QVariant ProcessingTable::data(const QModelIndex &index, int role) const {
 
 // Completed Inquiries Table Model Implementation
 int CompletedTable::rowCount(const QModelIndex &parent) const {
-
+    return this->repository->getCompletedSize();
 }
 
 int CompletedTable::columnCount(const QModelIndex &parent) const {
-
+    return 6;
 }
 
 QVariant CompletedTable::data(const QModelIndex &index, int role) const {
@@ -87,11 +87,11 @@ QVariant CompletedTable::data(const QModelIndex &index, int role) const {
 
 // Department Inquiries Table Model Implementation
 int DepartmentTable::rowCount(const QModelIndex &parent) const {
-
+    return this->repository->getProcessingByDepartmentSize(*this->department);
 }
 
 int DepartmentTable::columnCount(const QModelIndex &parent) const {
-
+    return 6;
 }
 
 QVariant DepartmentTable::data(const QModelIndex &index, int role) const {

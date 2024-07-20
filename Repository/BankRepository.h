@@ -10,6 +10,7 @@
 #include <map>
 // Project Libraries
 #include "../Domain/User.h"
+#include "../Domain/Agent.h"
 #include "../Domain/Department.h"
 #include "../Domain/Inquiry.h"
 #include "../Domain/InquiryStatus.h"
@@ -27,8 +28,11 @@ protected:
     std::vector<Inquiry> pendingList;
 
     // Processing Inquiries List
-    // MultiMap - Key, Values Pairs - Department & Processing Inquiries
-    std::multimap<Department, Inquiry> processingList;
+    // Map - Key , Value Pairs - Department & Department Processing Inquiries List
+    std::map<Department, std::multimap<Agent, Inquiry>> processingList;
+    // Department Processing Inquiries List
+    // MultiMap - Key, Values Pairs - Agents & Processing Inquiries
+    std::multimap<Agent, Inquiry> departmentProcessingList;
 
     // Completed Inquiries List
     std::vector<Inquiry> completedList;
