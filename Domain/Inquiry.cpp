@@ -24,8 +24,8 @@ int Inquiry::getInquiryID() const { return inquiryID; }
 std::string Inquiry::getDescription() const { return description; }
 UrgencyLevel Inquiry::getUrgencyLevel() const { return urgencyLevel; }
 InquiryStatus Inquiry::getStatus() const { return status; }
-std::optional<Agent> Inquiry::getAssignedAgent() const { return assignedAgent; }
-std::optional<Department> Inquiry::getAssignedDepartment() const { return assignedDepartment; }
+const Agent Inquiry::getAssignedAgent() const { return assignedAgent; }
+const Department Inquiry::getAssignedDepartment() const { return assignedDepartment; }
 std::optional<User> Inquiry::getUser() const { return user; }
 std::string Inquiry::getTimeStamp() const { return to_string(this->timestamp); }
 bool Inquiry::canBeDeleted() const {
@@ -38,7 +38,7 @@ bool Inquiry::canBeDeleted() const {
 
 // Object Attribute Setter
 void Inquiry::setUrgencyLevel(UrgencyLevel urgency) { urgencyLevel = urgency; }
-void Inquiry::setStatus(InquiryStatus status) { this->status = status; }
+void Inquiry::setStatus(InquiryStatus _status) { this->status = _status; }
 void Inquiry::assignAgent(const Agent &agent) { assignedAgent = agent; }
 void Inquiry::assignDepartment(Department dept) { assignedDepartment = dept; }
 

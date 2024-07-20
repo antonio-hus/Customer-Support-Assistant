@@ -47,8 +47,8 @@ public:
     [[nodiscard]] std::string getDescription() const;
     [[nodiscard]] UrgencyLevel getUrgencyLevel() const;
     [[nodiscard]] InquiryStatus getStatus() const;
-    [[nodiscard]] std::optional<Agent> getAssignedAgent() const;
-    [[nodiscard]] std::optional<Department> getAssignedDepartment() const;
+    [[nodiscard]] const Agent getAssignedAgent() const;
+    [[nodiscard]] const Department getAssignedDepartment() const;
     [[nodiscard]] std::optional<User> getUser() const;
     [[nodiscard]] std::string getTimeStamp() const;
     [[nodiscard]] bool canBeDeleted() const;
@@ -62,8 +62,6 @@ public:
     // Method to transition status
     void process();
     void complete();
-};
-
 };
 
 // Inquiry Class Exception

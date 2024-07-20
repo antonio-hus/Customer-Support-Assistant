@@ -35,30 +35,25 @@ protected:
     // Completed Inquiries List
     std::vector<Inquiry> completedList;
 
-    // Departments List - with agent count
-    std::map<Department, int> departmentsList;
-
-    // Agent List
-    std::vector<Agent> agentList;
+    // Departments MultiMap - Key: Department, Values: Agents
+    std::multimap<Department, Agent> departmentsMap;
 
 public:
 
     /// Class Constructor
-    BankRepository(const std::map<Department, int>& departmentsList);
+    BankRepository(const std::map<Department, int>& departmentsMap);
 
     /// GET Operations
-    int getPendingSize();
-    int getProcessingSize();
-    int getProcessingByDepartmentSize(const Department &department);
-    int getProcessingByAgentSize(const Agent &agent);
-    int getCompletedSize();
-    int getDepartmentsSize();
+    unsigned long long getPendingSize();
+    unsigned long long getProcessingSize();
+    unsigned long long getProcessingByDepartmentSize(const Department &department);
+    unsigned long long getProcessingByAgentSize(const Agent &agent);
+    unsigned long long getCompletedSize();
     std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> getPending();
     std::pair<std::map<Department, std::multimap<Agent, Inquiry>>::const_iterator, std::map<Department, std::multimap<Agent, Inquiry>>::const_iterator> getProcessing();
     std::pair<std::map<Department, std::multimap<Agent, Inquiry>>::const_iterator, std::map<Department, std::multimap<Agent, Inquiry>>::const_iterator> getProcessingByDepartment(const Department& department);
     std::pair<std::multimap<Agent, Inquiry>::const_iterator, std::multimap<Agent, Inquiry>::const_iterator> getProcessingByAgent(const Agent& agent);
     std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> getCompleted();
-    std::pair<std::map<Department, int>::const_iterator, std::map<Department, int>::const_iterator> getDepartments();
 
     /// POST/PUT Operations
     // Inquiry Handlers

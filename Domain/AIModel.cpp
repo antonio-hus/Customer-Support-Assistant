@@ -1,5 +1,6 @@
-//
-// Created by anton on 19/07/2024.
-//
-
+///////////////////////
+/// IMPORTS SECTION ///
+//////////////////////
+// C++ Libraries
+// Project Libraries
 #include "AIModel.h"
