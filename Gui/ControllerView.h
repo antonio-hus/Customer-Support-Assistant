@@ -26,6 +26,7 @@ Q_OBJECT
 private:
     BankController* controller;
     Ui::ControllerView *ui;
+    std::vector<QWidget*> allocatedScreens;
 
 public:
     explicit ControllerView(BankController* controller, QWidget *parent = nullptr);

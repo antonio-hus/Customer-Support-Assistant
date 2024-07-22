@@ -27,7 +27,7 @@ Inquiry BankController::createInquiry(const std::string &username, const std::st
 
     // Creating and storing new Inquiry
     auto newInquiry = Inquiry(newID, message, newUser, Agent(0, Department::BusinessBanking));
-    this->repository->addInquiry(newInquiry);
+    this->addInquiry(newInquiry);
 
     // Returning new Inquiry
     return newInquiry;
@@ -69,6 +69,22 @@ BankController::getCompleted() {
 }
 
 /// BankController Class - POST/PUT Operations
-void BankController::addInquiry(Inquiry &inquiry) { this->repository->addInquiry(inquiry); }
-void BankController::classifyInquiry(Inquiry &inquiry) { this->repository->classifyInquiry(inquiry); }
-void BankController::processInquiry(Inquiry &inquiry) { this->repository->processInquiry(inquiry); }
+void BankController::addInquiry(Inquiry &inquiry) {
+    this->repository->addInquiry(inquiry);
+    emit this->pendingDataChanged();
+    this->classifyInquiry(inquiry);
+}
+
+void BankController::classifyInquiry(Inquiry &inquiry) {
+    this->repository->classifyInquiry(inquiry);
+    emit this->pendingDataChanged();
+    emit this->processingDataChanged();
+    emit this->agentDataChanged(inquiry.getAssignedAgent());
+}
+
+void BankController::processInquiry(Inquiry &inquiry) {
+    this->repository->processInquiry(inquiry);
+    emit this->processingDataChanged();
+    emit this->completedDataChanged();
+    emit this->agentDataChanged(inquiry.getAssignedAgent());
+}

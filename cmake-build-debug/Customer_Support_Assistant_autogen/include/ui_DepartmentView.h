@@ -38,7 +38,6 @@ public:
     QLabel *label_4;
     QLineEdit *urgencyBox;
     QHBoxLayout *horizontalLayout;
-    QPushButton *openDiscussionButton;
     QPushButton *closeInquiryButton;
 
     void setupUi(QWidget *DepartmentView)
@@ -98,11 +97,6 @@ public:
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
-        openDiscussionButton = new QPushButton(DepartmentView);
-        openDiscussionButton->setObjectName("openDiscussionButton");
-
-        horizontalLayout->addWidget(openDiscussionButton);
-
         closeInquiryButton = new QPushButton(DepartmentView);
         closeInquiryButton->setObjectName("closeInquiryButton");
 
@@ -124,7 +118,6 @@ public:
         label_2->setText(QCoreApplication::translate("DepartmentView", "User:", nullptr));
         label_3->setText(QCoreApplication::translate("DepartmentView", "Message:", nullptr));
         label_4->setText(QCoreApplication::translate("DepartmentView", "Urgency:", nullptr));
-        openDiscussionButton->setText(QCoreApplication::translate("DepartmentView", "Open Discussion", nullptr));
         closeInquiryButton->setText(QCoreApplication::translate("DepartmentView", "Close Inquiry", nullptr));
     } // retranslateUi
 

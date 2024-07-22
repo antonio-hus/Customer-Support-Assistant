@@ -35,7 +35,10 @@ namespace {
 #ifdef QT_MOC_HAS_STRINGDATA
 struct qt_meta_stringdata_CLASSStatisticsViewENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSStatisticsViewENDCLASS = QtMocHelpers::stringData(
-    "StatisticsView"
+    "StatisticsView",
+    "showBarChart",
+    "",
+    "showPieChart"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -48,12 +51,20 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSStatisticsViewENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       0,    0, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
+
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    0,   26,    2, 0x0a,    1 /* Public */,
+       3,    0,   27,    2, 0x0a,    2 /* Public */,
+
+ // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -66,16 +77,26 @@ Q_CONSTINIT const QMetaObject StatisticsView::staticMetaObject = { {
     nullptr,
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSStatisticsViewENDCLASS_t,
         // Q_OBJECT / Q_GADGET
-        QtPrivate::TypeAndForceComplete<StatisticsView, std::true_type>
+        QtPrivate::TypeAndForceComplete<StatisticsView, std::true_type>,
+        // method 'showBarChart'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'showPieChart'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
 
 void StatisticsView::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    (void)_o;
-    (void)_id;
-    (void)_c;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        auto *_t = static_cast<StatisticsView *>(_o);
+        (void)_t;
+        switch (_id) {
+        case 0: _t->showBarChart(); break;
+        case 1: _t->showPieChart(); break;
+        default: ;
+        }
+    }
     (void)_a;
 }
 
@@ -97,6 +118,17 @@ void *StatisticsView::qt_metacast(const char *_clname)
 int StatisticsView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 2)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 2;
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 2)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 2;
+    }
     return _id;
 }
 QT_WARNING_POP

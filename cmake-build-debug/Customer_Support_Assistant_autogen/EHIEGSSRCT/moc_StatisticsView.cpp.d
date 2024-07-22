@@ -246,6 +246,7 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/QMap \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QObject \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20type_traits.h \
@@ -392,7 +393,15 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Qt/6.7.0/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/QVBoxLayout \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/QWidget \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/qboxlayout.h \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgridlayout.h \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/qlayout.h \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \

@@ -62,11 +62,16 @@ ConfigurationView::ConfigurationView(QWidget *parent) :
 
         // Department Views
         // Looping over all departments
+        int agentID = 0;
         for (const auto& pair : departmentMap) {
 
-            // Opening as many agents as specified in config
+            // Opening the agents as specified in config
             for (int i = 1; i <= pair.second; ++i) {
-                auto* departmentView = new DepartmentView(controller, toString(pair.first) + " - agent " + std::to_string(i));
+                agentID ++;
+                auto* agent = new Agent(agentID, pair.first);
+                allocatedAgents.push_back(agent);
+
+                auto* departmentView = new DepartmentView(controller, agent, toString(pair.first) + " - agent " + std::to_string(i));
                 allocatedViews.push_back(departmentView);
                 departmentView->show();
             }

@@ -245,10 +245,13 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QAbstractTableModel \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QObject \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20type_traits.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q23utility.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qabstractitemmodel.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qanystringview.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qarraydata.h \
@@ -387,7 +390,11 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Qt/6.7.0/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/QMessageBox \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/QWidget \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/qdialog.h \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/qmessagebox.h \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
@@ -401,5 +408,6 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/UrgencyLevel.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/User.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Repository/BankRepository.h \
+  C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/CustomTables.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/ObserverPattern.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/time.h

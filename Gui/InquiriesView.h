@@ -23,16 +23,22 @@ QT_END_NAMESPACE
 ////////////////////////
 /// CLASS DEFINITION ///
 ////////////////////////
-class InquiriesView : public QWidget, public Observer {
+class InquiriesView : public QWidget {
 Q_OBJECT
 private:
     BankController* controller;
     Ui::InquiriesView *ui;
+    PendingTable* pendingTable;
+    ProcessingTable* processingTable;
+    CompletedTable* completedTable;
 
 public:
     explicit InquiriesView(BankController* controller, QWidget *parent = nullptr);
-    void notify() override {};
     ~InquiriesView() override;
+
+    void updatePendingTable();
+    void updateProcessingTable();
+    void updateCompletedTable();
 };
 
 

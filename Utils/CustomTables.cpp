@@ -59,6 +59,38 @@ QVariant PendingTable::data(const QModelIndex &index, int role) const {
     return {};
 }
 
+void PendingTable::resetModel() {
+    this->beginResetModel();
+    this->endResetModel();
+}
+
+QVariant PendingTable::headerData(int section, Qt::Orientation orientation, int role) const {
+    if (role != Qt::DisplayRole)
+        return QVariant();
+
+    if (orientation == Qt::Horizontal) {
+        switch (section) {
+            case 0:
+                return QString("Inquiry ID");
+            case 1:
+                return QString("User");
+            case 2:
+                return QString("Description");
+            case 3:
+                return QString("Department");
+            case 4:
+                return QString("Status");
+            case 5:
+                return QString("Urgency Level");
+            default:
+                return QVariant();
+        }
+    } else if (orientation == Qt::Vertical) {
+        return QString(">");
+    }
+    return QVariant();
+}
+
 // Processing Inquiries Table Model Implementation
 int ProcessingTable::rowCount(const QModelIndex &parent) const {
     return this->controller->getProcessingSize();
@@ -114,6 +146,38 @@ QVariant ProcessingTable::data(const QModelIndex &index, int role) const {
     return {};
 }
 
+void ProcessingTable::resetModel() {
+    this->beginResetModel();
+    this->endResetModel();
+}
+
+QVariant ProcessingTable::headerData(int section, Qt::Orientation orientation, int role) const {
+    if (role != Qt::DisplayRole)
+        return QVariant();
+
+    if (orientation == Qt::Horizontal) {
+        switch (section) {
+            case 0:
+                return QString("Inquiry ID");
+            case 1:
+                return QString("User");
+            case 2:
+                return QString("Description");
+            case 3:
+                return QString("Department");
+            case 4:
+                return QString("Status");
+            case 5:
+                return QString("Urgency Level");
+            default:
+                return QVariant();
+        }
+    } else if (orientation == Qt::Vertical) {
+        return QString(">");
+    }
+    return QVariant();
+}
+
 // Completed Inquiries Table Model Implementation
 int CompletedTable::rowCount(const QModelIndex &parent) const {
     return this->controller->getCompletedSize();
@@ -162,6 +226,38 @@ QVariant CompletedTable::data(const QModelIndex &index, int role) const {
 
     // Other roles not supported
     return {};
+}
+
+QVariant CompletedTable::headerData(int section, Qt::Orientation orientation, int role) const {
+    if (role != Qt::DisplayRole)
+        return QVariant();
+
+    if (orientation == Qt::Horizontal) {
+        switch (section) {
+            case 0:
+                return QString("Inquiry ID");
+            case 1:
+                return QString("User");
+            case 2:
+                return QString("Description");
+            case 3:
+                return QString("Department");
+            case 4:
+                return QString("Status");
+            case 5:
+                return QString("Urgency Level");
+            default:
+                return QVariant();
+        }
+    } else if (orientation == Qt::Vertical) {
+        return QString(">");
+    }
+    return QVariant();
+}
+
+void CompletedTable::resetModel() {
+    this->beginResetModel();
+    this->endResetModel();
 }
 
 // Department Inquiries Table Model Implementation
@@ -218,6 +314,38 @@ QVariant DepartmentTable::data(const QModelIndex &index, int role) const {
     return {};
 }
 
+QVariant DepartmentTable::headerData(int section, Qt::Orientation orientation, int role) const {
+    if (role != Qt::DisplayRole)
+        return QVariant();
+
+    if (orientation == Qt::Horizontal) {
+        switch (section) {
+            case 0:
+                return QString("Inquiry ID");
+            case 1:
+                return QString("User");
+            case 2:
+                return QString("Description");
+            case 3:
+                return QString("Department");
+            case 4:
+                return QString("Status");
+            case 5:
+                return QString("Urgency Level");
+            default:
+                return QVariant();
+        }
+    } else if (orientation == Qt::Vertical) {
+        return QString(">");
+    }
+    return QVariant();
+}
+
+void DepartmentTable::resetModel() {
+    this->beginResetModel();
+    this->endResetModel();
+}
+
 // Agent Inquiries Table Model Implementation
 int AgentTable::rowCount(const QModelIndex &parent) const {
     return this->controller->getProcessingByAgentSize(this->agent);
@@ -270,4 +398,36 @@ QVariant AgentTable::data(const QModelIndex &index, int role) const {
 
     // Other roles not supported
     return {};
+}
+
+QVariant AgentTable::headerData(int section, Qt::Orientation orientation, int role) const {
+    if (role != Qt::DisplayRole)
+        return QVariant();
+
+    if (orientation == Qt::Horizontal) {
+        switch (section) {
+            case 0:
+                return QString("Inquiry ID");
+            case 1:
+                return QString("User");
+            case 2:
+                return QString("Description");
+            case 3:
+                return QString("Department");
+            case 4:
+                return QString("Status");
+            case 5:
+                return QString("Urgency Level");
+            default:
+                return QVariant();
+        }
+    } else if (orientation == Qt::Vertical) {
+        return QString(">");
+    }
+    return QVariant();
+}
+
+void AgentTable::resetModel() {
+    this->beginResetModel();
+    this->endResetModel();
 }

@@ -73,13 +73,6 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="openDiscussionButton">
-       <property name="text">
-        <string>Open Discussion</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QPushButton" name="closeInquiryButton">
        <property name="text">
         <string>Close Inquiry</string>

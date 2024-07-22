@@ -8,9 +8,10 @@
 #include <string>
 // Qt Libraries
 #include <QWidget>
+#include <QMessageBox>
 // Project Libraries
 #include "../Controller/BankController.h"
-#include "../Utils/ObserverPattern.h"
+#include "../Utils/CustomTables.h"
 
 
 ////////////////////////////
@@ -24,17 +25,21 @@ QT_END_NAMESPACE
 ////////////////////////
 /// CLASS DEFINITION ///
 ////////////////////////
-class DepartmentView : public QWidget, public Observer {
+class DepartmentView : public QWidget {
 Q_OBJECT
 private:
     BankController* controller;
     Department* department;
     Ui::DepartmentView *ui;
+    Agent* agent;
+    AgentTable* agentTable;
 
 public:
-    explicit DepartmentView(BankController* controller, const std::string& departmentName, QWidget *parent = nullptr);
-    void notify() override {};
+    explicit DepartmentView(BankController* controller, Agent* agent, const std::string& departmentName, QWidget *parent = nullptr);
     ~DepartmentView() override;
+
+    void updateAgentTable(Agent agent);
+    Inquiry getSelectedInquiry();
 };
 
 

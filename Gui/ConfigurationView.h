@@ -35,8 +35,10 @@ Q_OBJECT
 private:
     BankRepository* repository;
     BankController* controller;
-    std::vector<QWidget*> allocatedViews;
     Ui::ConfigurationView *ui;
+
+    std::vector<QWidget*> allocatedViews;
+    std::vector<Agent*> allocatedAgents;
 
 public:
     explicit ConfigurationView(QWidget *parent = nullptr);

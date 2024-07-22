@@ -33,6 +33,7 @@ const char *AgentException::what() const noexcept { return exceptionMessage.c_st
 // Object Methods Private
 void AgentValidator::validateAgentID(int agentID) {
     // AgentID length shall be non-negative
+    // AgentID '-1' = Uninitialized - special value
     if (agentID < -1) {
         throw AgentException("AgentID cannot be negative");
     }

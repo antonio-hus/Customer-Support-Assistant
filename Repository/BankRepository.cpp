@@ -80,11 +80,6 @@ BankRepository::getProcessingByDepartment(const Department& department) {
     // Get department Range
     auto deptIt = this->processingList.find(department);
 
-    // If department does not exist - return empty range
-    if (deptIt != this->processingList.end()) {
-        return { {}, {} };
-    }
-
     // If department exists - return department range
     auto& deptRange = deptIt->second;
     return { deptRange.begin(), deptRange.end() };
@@ -95,11 +90,6 @@ BankRepository::getProcessingByAgent(const Agent& agent) {
 
     // Get department range
     auto deptIt = this->processingList.find(agent.getDepartment());
-
-    // If department does not exist - return empty range
-    if (deptIt != this->processingList.end()) {
-        return { {}, {} };
-    }
 
     // If department exists - return agent range
     return deptIt->second.equal_range(agent);
@@ -171,13 +161,18 @@ void BankRepository::processInquiry(Inquiry &inquiry) {
 
     // Iterate over the range to find the specific inquiry to remove
     while (itToRemove != agentRange.second) {
-        if (&itToRemove->second == &inquiry) {
+        if (itToRemove->second == inquiry) {
 
             // Remove the inquiry from the unordered_multimap
             deptRange.erase(itToRemove);
             break;
         }
         ++itToRemove;
+    }
+
+    // If the unordered_multimap is empty, remove the department
+    if (deptRange.empty()) {
+        this->processingList.erase(deptIt);
     }
 
     // Set the Inquiry Status

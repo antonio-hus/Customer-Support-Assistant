@@ -245,6 +245,7 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QObject \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20type_traits.h \

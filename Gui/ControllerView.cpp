@@ -21,14 +21,16 @@ ControllerView::ControllerView(BankController* controller, QWidget *parent) :
     // View Inquiries Button
     // Open an Inquiries View screen
     connect(ui->viewInquiriesButton, &QPushButton::clicked, [=, this]{
-        auto* inquiriesView = new InquiriesView(controller, this);
+        auto* inquiriesView = new InquiriesView(controller);
+        this->allocatedScreens.push_back(inquiriesView);
         inquiriesView->show();
     });
 
     // View Statistics Button
     // Open a Statistics screen
     connect(ui->viewStatisticsButton, &QPushButton::clicked, [=, this]{
-        auto* statisticsView = new StatisticsView(controller, this);
+        auto* statisticsView = new StatisticsView(controller);
+        this->allocatedScreens.push_back(statisticsView);
         statisticsView->show();
     });
 }
@@ -36,4 +38,6 @@ ControllerView::ControllerView(BankController* controller, QWidget *parent) :
 // Class Destructor
 ControllerView::~ControllerView() {
     delete ui;
+    for(auto screen : this->allocatedScreens)
+        delete screen;
 }

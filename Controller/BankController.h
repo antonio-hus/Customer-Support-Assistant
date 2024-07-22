@@ -9,6 +9,8 @@
 #include <vector>
 #include <unordered_map>
 #include <exception>
+// Qt Libraries
+#include <QObject>
 // Project Libraries
 #include "../Domain/User.h"
 #include "../Domain/Department.h"
@@ -22,7 +24,14 @@
 /// CLASS DEFINITION ///
 ///////////////////////
 // BankController
-class BankController {
+class BankController: public QObject {
+Q_OBJECT
+signals:
+    void pendingDataChanged();
+    void processingDataChanged();
+    void completedDataChanged();
+    void agentDataChanged(Agent agent);
+
 private:
 
     // Persistent Data
