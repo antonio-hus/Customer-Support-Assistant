@@ -13,7 +13,6 @@ find_package(
         Core
         Gui
         Widgets
-        Charts
         REQUIRED)
 
 add_executable(
@@ -60,7 +59,6 @@ target_link_libraries(Customer_Support_Assistant
         Qt::Core
         Qt::Gui
         Qt::Widgets
-        Qt6::Charts
 )
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)

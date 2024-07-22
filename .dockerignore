@@ -1,0 +1,7 @@
+build/
+CMakeFiles/
+*.cmake
+*.o
+*.a
+*.log
+*.tmp

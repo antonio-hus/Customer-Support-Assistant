@@ -167,7 +167,7 @@ CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 CMAKE_LINKER:FILEPATH=C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/bin/ld.exe
 
 //make program
-CMAKE_MAKE_PROGRAM:FILEPATH=C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/ninja/win/x64/ninja.exe
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -365,6 +365,12 @@ Vulkan_LIBRARY:FILEPATH=Vulkan_LIBRARY-NOTFOUND
 
 //Path to a program.
 WINDEPLOYQT_EXECUTABLE:FILEPATH=C:/Qt/6.7.0/mingw_64/bin/windeployqt.exe
+
+//The directory containing a CMake configuration file for mongoc-1.0.
+mongoc-1.0_DIR:PATH=mongoc-1.0_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for mongocxx.
+mongocxx_DIR:PATH=C:/Users/anton/mongo-cxx-driver/build/install/lib/cmake/mongocxx-3.11.0-pre
 
 
 ########################

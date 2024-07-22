@@ -472,14 +472,6 @@ Customer_Support_Assistant_autogen/timestamp: \
   C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6/QtPublicTestHelpers.cmake \
   C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6/QtPublicToolHelpers.cmake \
   C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6Charts/Qt6ChartsAdditionalTargetInfo.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6Charts/Qt6ChartsConfig.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6Charts/Qt6ChartsConfigVersion.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6Charts/Qt6ChartsConfigVersionImpl.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6Charts/Qt6ChartsDependencies.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6Charts/Qt6ChartsTargets-relwithdebinfo.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6Charts/Qt6ChartsTargets.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6Charts/Qt6ChartsVersionlessTargets.cmake \
   C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake \
   C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake \
   C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake \
@@ -564,22 +556,6 @@ Customer_Support_Assistant_autogen/timestamp: \
   C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake \
   C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake \
   C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6OpenGL/Qt6OpenGLAdditionalTargetInfo.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6OpenGL/Qt6OpenGLConfig.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6OpenGL/Qt6OpenGLConfigVersion.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6OpenGL/Qt6OpenGLConfigVersionImpl.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6OpenGL/Qt6OpenGLDependencies.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6OpenGL/Qt6OpenGLTargets-relwithdebinfo.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6OpenGL/Qt6OpenGLTargets.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6OpenGL/Qt6OpenGLVersionlessTargets.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsAdditionalTargetInfo.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfig.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfigVersion.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfigVersionImpl.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsDependencies.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsTargets-relwithdebinfo.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsTargets.cmake \
-  C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsVersionlessTargets.cmake \
   C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake \
   C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginConfig.cmake \
   C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-relwithdebinfo.cmake \
