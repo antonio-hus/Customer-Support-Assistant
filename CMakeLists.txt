@@ -9,8 +9,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_PREFIX_PATH "C:/Qt/6.7.0/mingw_64/lib/cmake")
 
 find_package(
-        Qt6
-        COMPONENTS
+        Qt6 COMPONENTS
         Core
         Network
         Gui
@@ -65,8 +64,6 @@ target_link_libraries(
         Qt::Widgets
         Qt::Network
 )
-
-target_include_directories(Customer_Support_Assistant PRIVATE ${Qt6_INCLUDE_DIRS})
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
     set(DEBUG_SUFFIX)
