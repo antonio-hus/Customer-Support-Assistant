@@ -19,7 +19,7 @@ BankController::BankController(BankRepository *repository, AIModel* aiModel): re
 
 /// BankController Class - Signals & Slots
 // Slots
-void BankController::handleClassification(const std::pair<Inquiry, std::pair<UrgencyLevel, Department>>& classification) {
+void BankController::handleClassification(std::pair<Inquiry, std::pair<UrgencyLevel, Department>> classification) {
     Inquiry inquiry = classification.first;
     UrgencyLevel level = classification.second.first;
     Department department = classification.second.second;

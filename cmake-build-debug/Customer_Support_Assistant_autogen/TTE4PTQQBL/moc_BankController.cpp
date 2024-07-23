@@ -107,7 +107,7 @@ Q_CONSTINIT const QMetaObject BankController::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<Agent, std::false_type>,
         // method 'handleClassification'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const std::pair<Inquiry,std::pair<UrgencyLevel,Department>> &, std::false_type>
+        QtPrivate::TypeAndForceComplete<std::pair<Inquiry,std::pair<UrgencyLevel,Department>>, std::false_type>
     >,
     nullptr
 } };

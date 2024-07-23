@@ -45,7 +45,7 @@ private:
     std::vector<Inquiry> inquiries;
 
 private slots:
-    void handleClassification(const std::pair<Inquiry, std::pair<UrgencyLevel, Department>>& classification);
+    void handleClassification(std::pair<Inquiry, std::pair<UrgencyLevel, Department>> classification);
 
 public:
 
