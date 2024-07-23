@@ -1,3 +1,4 @@
+# Use an official Ubuntu base image
 FROM ubuntu:latest
 
 # Set environment variables to avoid interactive prompts during build
@@ -10,21 +11,8 @@ RUN apt-get update && \
     cmake \
     qt6-base-dev \
     qt6-declarative-dev \
-    qt6-charts-dev \
-    libx11-xcb1 \
-    libxcb-xinerama0 \
-    libxkbcommon-x11-0 \
-    libxcb1 \
-    libxrender1 \
-    libxi6 \
-    libxrandr2 \
-    libxcomposite1 \
-    libxdamage1 \
-    libxtst6 \
-    libxfixes3 \
-    libgl1-mesa-dri \
-    libgl1-mesa-glx \
-    && rm -rf /var/lib/apt/lists/*
+    libmysqlclient-dev && \
+    rm -rf /var/lib/apt/lists/*
 
 # Set the working directory in the container
 WORKDIR /app

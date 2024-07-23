@@ -11,6 +11,7 @@ set(CMAKE_PREFIX_PATH "C:/Qt/6.7.0/mingw_64/lib/cmake")
 find_package(
         Qt6 COMPONENTS
         Core
+        Network
         Gui
         Widgets
         REQUIRED)
@@ -55,10 +56,13 @@ add_executable(
         Utils/CustomTables.cpp
         Utils/time.h
 )
-target_link_libraries(Customer_Support_Assistant
+
+target_link_libraries(
+        Customer_Support_Assistant
         Qt::Core
         Qt::Gui
         Qt::Widgets
+        Qt::Network
 )
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)

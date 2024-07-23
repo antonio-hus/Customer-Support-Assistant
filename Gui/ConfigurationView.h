@@ -12,6 +12,8 @@
 #include <QWidget>
 // Project Libraries
 #include "../Domain/Department.h"
+#include "../Domain/UrgencyLevel.h"
+#include "../Domain/AIModel.h"
 #include "../Repository/BankRepository.h"
 #include "../Controller/BankController.h"
 #include "ControllerView.h"
@@ -35,6 +37,7 @@ Q_OBJECT
 private:
     BankRepository* repository;
     BankController* controller;
+    AIModel* ai;
     Ui::ConfigurationView *ui;
 
     std::vector<QWidget*> allocatedViews;

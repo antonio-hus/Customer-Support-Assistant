@@ -11,7 +11,20 @@
 ////////////////////////////
 /// BankController Class
 // Object Constructor
-BankController::BankController(BankRepository *repository): repository{repository} {}
+BankController::BankController(BankRepository *repository, AIModel* aiModel): repository{repository}, aiModel{aiModel} {
+
+    // Connecting Signals & Slots
+    connect(this->aiModel, &AIModel::isClassified, this, &BankController::handleClassification);
+}
+
+/// BankController Class - Signals & Slots
+// Slots
+void BankController::handleClassification(const std::pair<Inquiry, std::pair<UrgencyLevel, Department>>& classification) {
+    Inquiry inquiry = classification.first;
+    UrgencyLevel level = classification.second.first;
+    Department department = classification.second.second;
+    this->classifyInquiry(inquiry, level, department);
+}
 
 /// BankController Class - Builder Operations
 Inquiry BankController::createInquiry(const std::string &username, const std::string &firstname, const std::string &lastname,
@@ -72,11 +85,13 @@ BankController::getCompleted() {
 void BankController::addInquiry(Inquiry &inquiry) {
     this->repository->addInquiry(inquiry);
     emit this->pendingDataChanged();
-    this->classifyInquiry(inquiry);
+
+    // Send inquiry to be classified
+    this->aiModel->sendRequest(inquiry);
 }
 
-void BankController::classifyInquiry(Inquiry &inquiry) {
-    this->repository->classifyInquiry(inquiry);
+void BankController::classifyInquiry(Inquiry &inquiry, UrgencyLevel urgencyLevel, Department department) {
+    this->repository->classifyInquiry(inquiry, urgencyLevel, department);
     emit this->pendingDataChanged();
     emit this->processingDataChanged();
     emit this->agentDataChanged(inquiry.getAssignedAgent());

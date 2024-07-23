@@ -34,6 +34,9 @@ signals:
 
 private:
 
+    // AI Model
+    AIModel* aiModel;
+
     // Persistent Data
     BankRepository* repository;
 
@@ -41,10 +44,13 @@ private:
     std::vector<User> users;
     std::vector<Inquiry> inquiries;
 
+private slots:
+    void handleClassification(const std::pair<Inquiry, std::pair<UrgencyLevel, Department>>& classification);
+
 public:
 
     /// Constructor
-    explicit BankController(BankRepository* repository);
+    explicit BankController(BankRepository* repository, AIModel* aiModel);
 
     /// Object Builder Methods
     Inquiry createInquiry(const std::string& username, const std::string& firstname, const std::string& lastname, const std::string& email, const std::string& phonenumber, const std::string& message);
@@ -65,7 +71,7 @@ public:
     /// POST/PUT Operations
     // Inquiry Handlers
     void addInquiry(Inquiry& inquiry);
-    void classifyInquiry(Inquiry& inquiry);
+    void classifyInquiry(Inquiry& inquiry, UrgencyLevel urgencyLevel, Department department);
     void processInquiry(Inquiry& inquiry);
 };
 

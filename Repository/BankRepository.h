@@ -11,6 +11,7 @@
 // Project Libraries
 #include "../Domain/User.h"
 #include "../Domain/Agent.h"
+#include "../Domain/AIModel.h"
 #include "../Domain/Department.h"
 #include "../Domain/Inquiry.h"
 #include "../Domain/InquiryStatus.h"
@@ -24,6 +25,11 @@
 class BankRepository: public Subject {
 protected:
 
+    /// REPOSITORY Management
+    // AI Classifier Agent
+    AIModel* aiModel;
+
+    /// REPOSITORY Containers
     // Pending Inquiries List
     std::vector<Inquiry> pendingList;
 
@@ -45,7 +51,7 @@ public:
     static unsigned long long noInquiries;
 
     /// Class Constructor
-    explicit BankRepository(const std::unordered_map<Department, int>& departmentsMap);
+    explicit BankRepository(const std::unordered_map<Department, int>& departmentsMap, AIModel* aiModel);
     virtual ~BankRepository() = default;
 
     /// GET Operations
@@ -62,9 +68,9 @@ public:
 
     /// POST/PUT Operations
     // Inquiry Handlers
-    void addInquiry(Inquiry& inquiry);
-    void classifyInquiry(Inquiry& inquiry);
-    void processInquiry(Inquiry& inquiry);
+    virtual void addInquiry(Inquiry& inquiry);
+    virtual void classifyInquiry(Inquiry& inquiry, UrgencyLevel urgencyLevel, Department department);
+    virtual void processInquiry(Inquiry& inquiry);
     void deleteOldInquiries();
 
 };
@@ -74,7 +80,6 @@ public:
 //////////////////////////
 // Bank Repository - Cloud Storage - MongoDB
 class CloudBankRepository: public BankRepository {
-public:
 
 };
 

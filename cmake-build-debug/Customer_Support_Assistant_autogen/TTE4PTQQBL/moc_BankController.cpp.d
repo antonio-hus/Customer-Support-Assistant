@@ -117,6 +117,7 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/charconv \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/chrono \
+  C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/climits \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/clocale \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cmath \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/compare \
@@ -244,10 +245,19 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.2/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QCoreApplication \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QFlags \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QList \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QMetaType \
   C:/Qt/6.7.0/mingw_64/include/QtCore/QObject \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QSharedDataPointer \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QString \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QUrl \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QVariant \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20type_traits.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/q23utility.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qanystringview.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qarraydata.h \
@@ -262,6 +272,7 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Qt/6.7.0/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qbytearrayview.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qcalendar.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qchar.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qcompare.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qcompare_impl.h \
@@ -272,8 +283,18 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Qt/6.7.0/mingw_64/include/QtCore/qcontainerfwd.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qcontainerinfo.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qcontainertools_impl.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qcontiguouscache.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qcoreapplication.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qcoreevent.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qcryptographichash.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qdatetime.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qdeadlinetimer.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qdebug.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qelapsedtimer.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qeventloop.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qexceptionhandling.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qflags.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qfloat16.h \
@@ -283,19 +304,24 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Qt/6.7.0/mingw_64/include/QtCore/qgenericatomic.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qglobal.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qglobalstatic.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qhash.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qhashfunctions.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qiodevice.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qiodevicebase.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qiterator.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qlatin1stringview.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qlist.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qlocale.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qlogging.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qmalloc.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qmap.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qmath.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qmetacontainer.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qmetatype.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qminmax.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qnamespace.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qnativeinterface.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qnumeric.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qobject.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qobject_impl.h \
@@ -307,6 +333,11 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Qt/6.7.0/mingw_64/include/QtCore/qrefcount.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qscopedpointer.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qscopeguard.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qset.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qshareddata.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qshareddata_impl.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qsharedpointer.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qsharedpointer_impl.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qstring.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qstringalgorithms.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qstringbuilder.h \
@@ -329,6 +360,7 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtcoreexports.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtdeprecationmarkers.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtenvironmentvariables.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qtextstream.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtnoop.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtpreprocessorsupport.h \
@@ -339,10 +371,31 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtversionchecks.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtypeinfo.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtypes.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qurl.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qutf8stringview.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qvariant.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qvarlengtharray.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qyieldcpu.h \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/QNetworkAccessManager \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/QSslConfiguration \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/qabstractsocket.h \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/qhostaddress.h \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/qnetworkrequest.h \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/qssl.h \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/qsslcertificate.h \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/qsslconfiguration.h \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/qsslerror.h \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/qsslsocket.h \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/qtcpsocket.h \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/qtnetwork-config.h \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/qtnetworkexports.h \
+  C:/Qt/6.7.0/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+  C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/AIModel.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Agent.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Department.h \
   C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Inquiry.h \

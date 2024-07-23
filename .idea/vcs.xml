@@ -2,6 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/mongo-c-driver-1.17.0/cmake-build/mongo-cxx-driver" vcs="Git" />
   </component>
 </project>

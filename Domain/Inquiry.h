@@ -38,9 +38,13 @@ public:
 
     // Constructor
     explicit Inquiry(unsigned long long id, const std::string &desc, const User &user, Agent assignedAgent=Agent(-1, Department::Unclassified));
+    Inquiry(const Inquiry& other) = default;
+    Inquiry(Inquiry&& other) noexcept = default;
 
     // Operator Overload
     bool operator==(const Inquiry& other) const;
+    Inquiry& operator=(const Inquiry& other) = default;
+    Inquiry& operator=(Inquiry&& other) noexcept = default;
 
     // Getters
     [[nodiscard]] unsigned long long getInquiryID() const;

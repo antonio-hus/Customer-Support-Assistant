@@ -56,4 +56,21 @@ inline std::string toString(Department dept) {
     }
 }
 
+inline Department departmentFromString(const std::string& department) {
+
+    // Strings Match
+    if(department == "Customer Service") return Department::CustomerService;
+    else if(department == "Personal Banking") return Department::PersonalBanking;
+    else if(department == "Business Banking") return Department::BusinessBanking;
+    else if(department == "Investment Services") return Department::InvestmentServices;
+    else if(department == "Loans and Mortgages") return Department::LoansMortgages;
+    else if(department == "Risk Management") return Department::RiskManagement;
+    else if(department == "IT Support") return Department::ITSupport;
+    else if(department == "Human Resources") return Department::HR;
+    else if(department == "Finance and Accounting") return Department::FinanceAccounting;
+
+    // Default Case
+    else return Department::CustomerService;
+}
+
 #endif

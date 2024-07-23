@@ -42,9 +42,27 @@ ConfigurationView::ConfigurationView(QWidget *parent) :
                 { Department::FinanceAccounting, stoi(ui->financeAccountingBox->text().toStdString()) },
         };
 
+        // Available Departments
+        std::vector<std::string> availableDepartments;
+        for (const auto& entry : departmentMap) {
+            if (entry.second > 0) {
+                availableDepartments.push_back(toString(entry.first));
+            }
+        }
+
+        // Available Urgency Level Labels
+        std::vector<std::string> availableUrgencyLevels;
+        availableUrgencyLevels.push_back(toString(UrgencyLevel::Low));
+        availableUrgencyLevels.push_back(toString(UrgencyLevel::Medium));
+        availableUrgencyLevels.push_back(toString(UrgencyLevel::High));
+        availableUrgencyLevels.push_back(toString(UrgencyLevel::Critical));
+
         // Initialize repository & controller
-        this->repository = new BankRepository(departmentMap);
-        this->controller = new BankController(this->repository);
+        this->ai = new AIModel();
+        this->ai->setDepartments(availableDepartments);
+        this->ai->setUrgencies(availableUrgencyLevels);
+        this->repository = new BankRepository(departmentMap, ai);
+        this->controller = new BankController(this->repository, ai);
 
         // Hiding View
         this->hide();
@@ -88,4 +106,5 @@ ConfigurationView::~ConfigurationView() {
     }
     delete repository;
     delete controller;
+    delete ai;
 }

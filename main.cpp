@@ -33,6 +33,9 @@ int main(int argc, char *argv[]) {
     // Execute the application
     int result = QApplication::exec();
 
+    // Perform Clean-up
+    delete configurationView;
+
     // Return execution result
     return result;
 }

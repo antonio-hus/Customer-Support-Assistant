@@ -19,7 +19,7 @@ unsigned long long BankRepository::noInquiries = 0;
 /// CLASS IMPLEMENTATION ///
 ////////////////////////////
 /// BankRepository Constructor
-BankRepository::BankRepository(const std::unordered_map<Department, int>& departmentsMap) {
+BankRepository::BankRepository(const std::unordered_map<Department, int>& departmentsMap, AIModel* aiModel): aiModel{aiModel} {
 
     // Iterate Bank Configuration
     int counter = 0;
@@ -107,7 +107,7 @@ void BankRepository::addInquiry(Inquiry& inquiry) {
     this->notify();
 }
 
-void BankRepository::classifyInquiry(Inquiry& inquiry) {
+void BankRepository::classifyInquiry(Inquiry& inquiry, UrgencyLevel urgencyLevel, Department department) {
 
     // Remove from pendingList
     auto it = std::find(this->pendingList.begin(), this->pendingList.end(), inquiry);
@@ -119,16 +119,15 @@ void BankRepository::classifyInquiry(Inquiry& inquiry) {
     inquiry.process();
 
     // Set the Inquiry Urgency
-    inquiry.setUrgencyLevel(UrgencyLevel::Low); // TODO: Change with AI Classification
+    inquiry.setUrgencyLevel(urgencyLevel);
 
     // Set the Department
-    Department DEPARTMENT = this->departmentsMap.begin()->first; // TODO: Change with AI Classification
-    inquiry.assignDepartment(DEPARTMENT);
+    inquiry.assignDepartment(department);
 
     // Set the Agent
     // Assign Inquiry to Agent with the least inquiries
-    auto& deptRange = this->processingList[DEPARTMENT];
-    auto agents = this->departmentsMap.equal_range(DEPARTMENT);
+    auto& deptRange = this->processingList[department];
+    auto agents = this->departmentsMap.equal_range(department);
 
     unsigned long long minInquiries = std::numeric_limits<unsigned long long>::max();
     Agent minAgent = Agent(-1, Department::Unclassified);
@@ -191,5 +190,5 @@ void BankRepository::deleteOldInquiries() {
     }
 }
 
-
+/// CloudBankRepository Class
 

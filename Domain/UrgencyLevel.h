@@ -40,4 +40,12 @@ inline std::string toString(UrgencyLevel level) {
     }
 }
 
+inline UrgencyLevel urgencyFromString(const std::string& level) {
+    if(level == "Low") return UrgencyLevel::Low;
+    else if(level == "Medium") return UrgencyLevel::Medium;
+    else if(level == "High") return UrgencyLevel::High;
+    else if(level == "Critical") return UrgencyLevel::Critical;
+    else return UrgencyLevel::Low;
+}
+
 #endif
