@@ -75,12 +75,4 @@ public:
 
 };
 
-//////////////////////////
-/// DERIVED DEFINITION ///
-//////////////////////////
-// Bank Repository - Cloud Storage - MongoDB
-class CloudBankRepository: public BankRepository {
-
-};
-
 #endif
