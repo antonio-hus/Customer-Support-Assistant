@@ -1,7 +1,7 @@
 # Customer Support Dispatcher Agent
 
 ![Desktop App View](images/admin-view2.png)
-For more in-app photos take a look in the images folder.
+For more in-app photos take a look at the images in the root directory.
 
 ## Overview
 The Customer Support Dispatcher Agent simulates the automation of dispatcher tasks within customer support centers using AI. 
