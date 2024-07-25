@@ -65,7 +65,7 @@ public:
     std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> getPending();
     std::pair<std::unordered_map<Department, std::unordered_multimap<Agent, Inquiry>>::const_iterator, std::unordered_map<Department, std::unordered_multimap<Agent, Inquiry>>::const_iterator> getProcessing();
     std::pair<std::unordered_multimap<Agent, Inquiry>::const_iterator, std::unordered_multimap<Agent, Inquiry>::const_iterator> getProcessingByDepartment(const Department& department);
-    std::pair<std::unordered_multimap<Agent, Inquiry>::const_iterator, std::unordered_multimap<Agent, Inquiry>::const_iterator> getProcessingByAgent(const Agent& agent);
+    std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> getProcessingByAgent(const Agent& agent);
     std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator> getCompleted();
 
     /// POST/PUT Operations

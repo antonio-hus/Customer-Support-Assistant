@@ -99,7 +99,7 @@ void StatisticsView::paintEvent(QPaintEvent *event) {
 
 // Painting the Graph - Bar Chart
 void StatisticsView::drawBarChart(QPainter &painter) {
-    painter.setPen(QPen(Qt::white, 2));
+    painter.setPen(QPen(Qt::black, 2));
     painter.setBrush(QBrush(Qt::blue));
 
     // Increased padding and spacing
@@ -110,7 +110,7 @@ void StatisticsView::drawBarChart(QPainter &painter) {
 
     // No data to display
     if (numDepartments == 0) {
-        painter.setPen(Qt::white);
+        painter.setPen(Qt::black);
         painter.drawText(10, height() / 2, "No data available");
         return;
     }
@@ -132,7 +132,7 @@ void StatisticsView::drawBarChart(QPainter &painter) {
     }
 
     // Draw axes
-    painter.setPen(QPen(Qt::white, 2));
+    painter.setPen(QPen(Qt::black, 2));
     painter.drawLine(padding, height() - padding, width() - padding, height() - padding); // X-axis
     painter.drawLine(padding, height() - padding, padding, padding); // Y-axis
 
@@ -148,7 +148,7 @@ void StatisticsView::drawBarChart(QPainter &painter) {
             painter.drawRect(x, y, barWidth, barHeight);
 
             // Draw the department name and count next to the bar
-            painter.setPen(Qt::white);
+            painter.setPen(Qt::black);
             painter.drawText(x + barWidth / 2, y - 5, it.key() + ": " + QString::number(it.value()));
         }
         x += barWidth + spacing;
@@ -165,7 +165,7 @@ void StatisticsView::drawPieChart(QPainter &painter) {
     }
 
     if (total == 0) {
-        painter.setPen(Qt::white);
+        painter.setPen(Qt::black);
         painter.drawText(10, height() / 2, "No data available");
         return;
     }

@@ -80,7 +80,7 @@ Inquiry DepartmentView::getSelectedInquiry() {
     // Get corresponding inquiry
     auto begin = this->controller->getProcessingByAgent(*this->agent).first;
     std::advance(begin, row);
-    Inquiry inquiry = begin->second;
+    Inquiry inquiry = *begin;
 
     return inquiry;
 }

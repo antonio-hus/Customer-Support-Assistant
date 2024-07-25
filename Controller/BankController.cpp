@@ -3,6 +3,8 @@
 //////////////////////
 // C++ Libraries
 #include <string>
+#include <iterator>
+#include <algorithm>
 // Project Libraries
 #include "BankController.h"
 
@@ -71,9 +73,26 @@ BankController::getProcessingByDepartment(const Department &department) {
     return this->repository->getProcessingByDepartment(department);
 }
 
-std::pair<std::unordered_multimap<Agent, Inquiry>::const_iterator, std::unordered_multimap<Agent, Inquiry>::const_iterator>
+std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator>
 BankController::getProcessingByAgent(const Agent &agent) {
-    return this->repository->getProcessingByAgent(agent);
+    // Get the range of inquiries for the agent
+    auto range = this->repository->getProcessingByAgent(agent);
+
+    // Create a vector to store the Inquiry objects
+    std::vector<Inquiry> agentInquiries;
+
+    // Transform the range of pairs into a vector of Inquiries
+    std::transform(range.first, range.second, std::back_inserter(agentInquiries),
+                   [](const std::pair<const Agent, Inquiry>& pair) {
+                       return pair.second;
+                   });
+
+    // Sort the inquiries by urgency level
+    std::sort(agentInquiries.begin(), agentInquiries.end(), [](const Inquiry& a, const Inquiry& b) {
+        return a.getUrgencyLevel() < b.getUrgencyLevel();
+    });
+
+    return {agentInquiries.begin(), agentInquiries.end()};
 }
 
 std::pair<std::vector<Inquiry>::const_iterator, std::vector<Inquiry>::const_iterator>

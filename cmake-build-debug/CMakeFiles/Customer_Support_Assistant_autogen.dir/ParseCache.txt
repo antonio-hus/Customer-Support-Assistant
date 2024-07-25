@@ -408,6 +408,7 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Controller/B
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/ObserverPattern.h
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/time.h
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/Customer_Support_Assistant_autogen/moc_predefs.h
+C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/User.h
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/main.cpp
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/AIModel.h
  mmc:Q_OBJECT
@@ -815,9 +816,6 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/AIMod
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/User.h
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/time.h
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/Customer_Support_Assistant_autogen/moc_predefs.h
-C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/User.h
-C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Agent.h
-C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Inquiry.h
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ClientView.h
  mmc:Q_OBJECT
  mdp:C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm
@@ -1269,10 +1267,13 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ClientVi
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/ObserverPattern.h
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/time.h
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/Customer_Support_Assistant_autogen/moc_predefs.h
+C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Inquiry.h
+C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Agent.h
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/UrgencyLevel.h
-C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/InquiryStatus.h
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ControllerView.cpp
  uic:ui_ControllerView.h
+C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/InquiryStatus.h
+C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Repository/BankRepository.h
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ConfigurationView.h
  mmc:Q_OBJECT
  mdp:C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm
@@ -1730,7 +1731,6 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/Configur
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/ObserverPattern.h
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/time.h
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/Customer_Support_Assistant_autogen/moc_predefs.h
-C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Repository/BankRepository.h
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ControllerView.h
  mmc:Q_OBJECT
  mdp:C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm
@@ -2178,6 +2178,7 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/Controll
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/ObserverPattern.h
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/time.h
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/Customer_Support_Assistant_autogen/moc_predefs.h
+C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/time.h
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/DepartmentView.h
  mmc:Q_OBJECT
  mdp:C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm
@@ -2632,7 +2633,6 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/Departme
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/ObserverPattern.h
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/time.h
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/Customer_Support_Assistant_autogen/moc_predefs.h
-C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/time.h
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/InquiriesView.h
  mmc:Q_OBJECT
  mdp:C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm
@@ -3544,17 +3544,17 @@ C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/Statisti
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/time.h
  mdp:C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/cmake-build-debug/Customer_Support_Assistant_autogen/moc_predefs.h
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/CustomTables.h
-C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/ObserverPattern.h
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Controller/BankController.cpp
+C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Utils/ObserverPattern.h
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/AIModel.cpp
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Agent.cpp
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/Inquiry.cpp
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Domain/User.cpp
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ClientView.cpp
  uic:ui_ClientView.h
+C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Repository/BankRepository.cpp
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/ConfigurationView.cpp
  uic:ui_ConfigurationView.h
-C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Repository/BankRepository.cpp
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/DepartmentView.cpp
  uic:ui_DepartmentView.h
 C:/Users/anton/OneDrive/Documents/GitHub/Customer-Support-Assistant/Gui/InquiriesView.cpp
