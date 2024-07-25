@@ -1,6 +1,6 @@
 # Customer Support Dispatcher Agent
 
-![Desktop App View](images/admin-view2.png)
+![Desktop App View](admin-view2.png)
 For more in-app photos take a look at the images in the root directory.
 
 ## Overview
