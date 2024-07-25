@@ -77,18 +77,37 @@ To run the desktop application locally, follow these steps:
 The app follows Layered Architecture standards and is structured in 4 main parts. Besides those there are some util functions and configuration files.
 
 1. **Domain**:  
-This folder includes the models of the fictive Bank Institution (the modules are highly reusable for different cases).  
-Agent - the customer support agent - characterized by its ID and Department.  
-AIModel - the AI model - allows making requests to the Groq API to get the necessary inquiry classification data - Department and UrgencyLevel.  
-Department - the enumeration of departments available in the institution.  
-Inquiry - the client issued inquiry - characterized by its ID, Issuer User, Description, Status, Assigned Agent, Assigned Department, Assigned UrgencyLevel.  
-InquiryStatus - the enumeration of statues of an inquiry - Pending = awaiting AI classification, Processing = awaiting agent action, Completed.  
-UrgencyLevel - the enumeration of urgency levels an inquiry can take (Low, Medium, High, Critical).
-User - the identification data provided by the client in the inquiry issuing form - Username, First and Last Name, E-mail, Phone Number
+This folder defines the models of the fictive Bank Institution (the modules are highly reusable for different cases).
+  
+- Agent - the customer support agent - characterized by its ID and Department.  
+- AIModel - the AI model - allows making requests to the Groq API to get the necessary inquiry classification data - Department and UrgencyLevel.  
+- Department - the enumeration of departments available in the institution.  
+- Inquiry - the client issued inquiry - characterized by its ID, Issuer User, Description, Status, Assigned Agent, Assigned Department, Assigned UrgencyLevel.  
+- InquiryStatus - the enumeration of statues of an inquiry - Pending = awaiting AI classification, Processing = awaiting agent action, Completed.  
+- UrgencyLevel - the enumeration of urgency levels an inquiry can take (Low, Medium, High, Critical).
+- User - the identification data provided by the client in the inquiry issuing form - Username, First and Last Name, E-mail, Phone Number
 
-3. **Repository**:
-4. **Controller**:
-5. **Gui**:
+2. **Repository**:
+This folder defines the Repository of the Instititution, with getters and setters for data.
+
+The inquiries are held by processing status in the following data structures:  
+- Pending - Vector
+- Processing - Unordered Map of Key Department and Value Unordered MultiMap of Key Agent and Values Inquiries.
+- Completed - Vector
+
+**Note**: All getters return constant iterators over the data structures to protect the underlying data, and provide a uniform way of accessing it - **Iterator Design Patten**.
+
+3. **Controller**:
+This folder defines the Controller of the Institution methods. It mediates the interactions between the views and the models.  
+The controller defines methods for creating and processing new inquiries, but also getting repository data in the required order.
+
+7. **Gui**:
+This folder defines the Graphical User Interface of the Institution's Platform.
+
+- **Client View** - the form where clients create new inquiries
+- **Configuration View** - the admin controller to start up the system by setting the number of agents in each department.
+- **Controller View** - the admin panel to see the **Statistics View** = graphical representations (charts) of department performance along the **Inquiries Views** = raw data from the system.
+- **Department View** - the agent panel, where inquiries are redirected to the worker from the assigned department with the smallest workload (least number of inquiries).
   
 **Note:**  
 Util functions include derived Table Models to allow updating data following the **MVC (Model-View-Controller) Design Pattern**.  
