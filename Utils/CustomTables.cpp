@@ -369,7 +369,7 @@ QVariant AgentTable::data(const QModelIndex &index, int role) const {
         int col = index.column();
 
         // Get the range of agent's inquiries
-        auto [begin, end] = this->controller->getCompleted();
+        auto [begin, end] = this->controller->getProcessingByAgent(agent);
 
         // Out of bounds
         if (row >= std::distance(begin, end)) {
