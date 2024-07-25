@@ -72,6 +72,13 @@ To run the desktop application locally, follow these steps:
     ```
 
 ## Usage
+The project runs a simulation of a Customer Support Centre from a Banking Institution.  
+The admin starts the platform and configures the day's department and agent configuration - modelling a dynamic work environment.  
+The admin distributes the agent terminals opened, and keeps track of the overall department performance metrics on his monitor.  
+The clients can now start creating inquiries. They will be set to a pending state and in just a few miliseconds the AI Dispatcher classifies them to the most appropiate department.
+There the agent with the smallest workload (least number of inquiries) will recieve it and will be placed on his duty list based on urgency (highest urgency first).  
+After completion the agent closes the ticket and moves on with the tasks.  
+The admin sees all data at each stage and can see a bar / pie chart of the departments with the most completed inquiries.
 
 ## Project Structure
 The app follows Layered Architecture standards and is structured in 4 main parts. Besides those there are some util functions and configuration files.
@@ -87,7 +94,7 @@ This folder defines the models of the fictive Bank Institution (the modules are 
 - UrgencyLevel - the enumeration of urgency levels an inquiry can take (Low, Medium, High, Critical).
 - User - the identification data provided by the client in the inquiry issuing form - Username, First and Last Name, E-mail, Phone Number
 
-2. **Repository**:
+2. **Repository**:  
 This folder defines the Repository of the Instititution, with getters and setters for data.
 
 The inquiries are held by processing status in the following data structures:  
@@ -97,11 +104,11 @@ The inquiries are held by processing status in the following data structures:
 
 **Note**: All getters return constant iterators over the data structures to protect the underlying data, and provide a uniform way of accessing it - **Iterator Design Patten**.
 
-3. **Controller**:
+3. **Controller**:  
 This folder defines the Controller of the Institution methods. It mediates the interactions between the views and the models.  
 The controller defines methods for creating and processing new inquiries, but also getting repository data in the required order.
 
-7. **Gui**:
+7. **Gui**:  
 This folder defines the Graphical User Interface of the Institution's Platform.
 
 - **Client View** - the form where clients create new inquiries
