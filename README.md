@@ -1,5 +1,8 @@
 # Customer Support Dispatcher Agent
 
+![Desktop App View](images/admin-view2.png)
+For more in-app photos take a look in the images folder.
+
 ## Overview
 The Customer Support Dispatcher Agent simulates the automation of dispatcher tasks within customer support centers using AI. 
 Inside the desktop app you will see a Bank Customer Support Platform that leverages LLama3 8B Model (LLM from Meta) to assign the correct department and urgency to each request.
