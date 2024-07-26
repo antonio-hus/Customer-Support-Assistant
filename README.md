@@ -45,7 +45,10 @@ Before running the app on your system, ensure you have the following:
         ```
     - **Windows**: Download and install Git from [Git for Windows](https://gitforwindows.org/).
 
-4. **Internet Connection**: Required to download the repository and Docker images.
+4. **Qt Framework**: The Qt framework is used for both backend and frontend development of this application.
+    - Download and install Qt 6.7.0 from [Qt official website](https://www.qt.io/download).
+
+5. **Internet Connection**: Required to download the repository and Docker images.
 
 
 ## Installation
